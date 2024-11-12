@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = ({ onLogin }) => {
@@ -8,8 +9,6 @@ const Login = ({ onLogin }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-       
         onLogin();
     };
 
@@ -53,7 +52,7 @@ const Login = ({ onLogin }) => {
                     </div>
                     <button type="submit" className="submit-btn">Login</button>
                     <div className="form-footer">
-                        <p>Belum punya akun? <a href="#" onClick={(e) => { e.preventDefault(); }}>Daftar</a></p>
+                        <p>Belum punya akun? <Link to="/register">Daftar</Link></p>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = ({ onToggle }) => {
@@ -80,7 +81,7 @@ const Register = ({ onToggle }) => {
                     <button type="submit" className="submit-btn">Register</button>
                     {errorMessage && <p className="error">{errorMessage}</p>}
                     <div className="form-footer">
-                        <p>Sudah punya akun? <a href="#" onClick={(e) => { e.preventDefault(); onToggle(); }}>Login</a></p>
+                        <p>Sudah punya akun? <Link to="/login">Login</Link></p>
                     </div>
                 </form>
             </div>
