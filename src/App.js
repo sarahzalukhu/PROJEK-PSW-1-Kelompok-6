@@ -1,19 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Beranda from './components/Beranda';
-import Materi from './components/Materi';
-import Latihan from './components/Latihan';
+// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import Schedule from './components/Schedule';
+import './App.css';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true); // If login successful, update state
+  };
+
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Beranda />} />
-        <Route path="/materi" element={<Materi />} />
-        <Route path="/latihan" element={<Latihan />} />
-      </Routes>
+      <div className="App">
+        {isLoggedIn ? (
+          <Routes>
+            
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/" element={<Dashboard />} />
+            
+          </Routes>
+        ) : (
+          <Login onLogin={handleLogin} /> 
+        )}
+      </div>
     </Router>
   );
 }
