@@ -1,34 +1,28 @@
-
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
 
-const Register = ({ onToggle }) => {
+function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        navigate('/login');
+    };     
 
-      
-        if (password !== confirmPassword) {
-            setErrorMessage('Password tidak cocok!');
-            return;
+    const handleButtonClick  = () => {
+        if (!email || !password || !confirmPassword) {
+            alert("Mohon isi semua kolom sebelum melanjutkan!");
+        } else {
+            alert("Selamat, akun anda berhasil didaftarkan!");
         }
-
-      
-        const newUser = { email, password };
-        localStorage.setItem('user', JSON.stringify(newUser)); 
-
-        
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-        setErrorMessage('');
-        onToggle(); 
     };
+      
+    const newUser = { email, password };
+    localStorage.setItem('user', JSON.stringify(newUser));
 
     return (
         <div className="container">
@@ -49,37 +43,21 @@ const Register = ({ onToggle }) => {
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
+                        <input type="email" placeholder="Email" value={email}
+                            onChange={(e) => setEmail(e.target.value)} required />
                         <i className="fas fa-envelope"></i>
                     </div>
                     <div className="form-group">
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
+                        <input type="password" placeholder="Password" value={password}
+                            onChange={(e) => setPassword(e.target.value)} required />
                         <i className="fas fa-lock"></i>
                     </div>
                     <div className="form-group">
-                        <input
-                            type="password"
-                            placeholder="Confirm Password"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                            required
-                        />
+                        <input type="password" placeholder="Confirm Password" value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)} required />
                         <i className="fas fa-lock"></i>
                     </div>
-                    <button type="submit" className="submit-btn">Register</button>
-                    {errorMessage && <p className="error">{errorMessage}</p>}
+                    <button type="submit" className="submit-btn" onClick={handleButtonClick}>Register</button>
                     <div className="form-footer">
                         <p>Sudah punya akun? <Link to="/login">Login</Link></p>
                     </div>

@@ -1,16 +1,14 @@
-
 import React from 'react';
 import './Dashboard.css'; 
 import { Link } from 'react-router-dom'; 
 
-const Dashboard = () => {
+function Dashboard () {
     return (
         <div className="dashboard">
-            
             <aside className="sidebar">
                 <div className="logo">
                     <img src="./imange.png" alt="" />
-                    <h2>SMA RK BINTAG TIMUR</h2>
+                    <h2>KuPintar</h2>
                 </div>
                 <nav>
                     <ul>
