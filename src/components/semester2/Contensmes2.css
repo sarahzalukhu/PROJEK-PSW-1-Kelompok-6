@@ -1,0 +1,131 @@
+/* General Container */
+.exposition-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Section */
+  .expo-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .expo-title {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .expo-subtitle {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Tabs and Content */
+  .expo-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tab-button.active {
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+  }
+  
+  .content-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    color: #555;
+  }
+  
+  .custom-alert {
+    padding: 10px;
+    border-left: 4px solid #4CAF50;
+    background-color: #f1f1f1;
+  }
+  
+  .custom-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .list-item {
+    margin: 5px 0;
+  }
+  
+  /* Quiz Section */
+  .quiz-container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .quiz-question {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option-button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .option-button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Navigation Buttons */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

@@ -1,0 +1,231 @@
+/* Custom CSS for Exposition Text Component */
+
+/* Main Container Styles */
+.exposition-container {
+    background-color: #fffef2;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  /* Header Styles */
+  .expo-header {
+    background-color: #fef9c3;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(251, 191, 36, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .expo-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(251, 191, 36, 0.2);
+  }
+  
+  .expo-title {
+    color: #854d0e;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .expo-subtitle {
+    color: #a16207;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Navigation Tabs */
+  .expo-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-button {
+    background-color: #fef9c3;
+    color: #a16207;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .tab-button:hover {
+    background-color: #fde68a;
+    transform: translateY(-1px);
+  }
+  
+  .tab-button.active {
+    background-color: #fbbf24;
+    color: #854d0e;
+  }
+  
+  /* Content Card Styles */
+  .content-card {
+    background-color: #fef9c3;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(251, 191, 36, 0.1);
+  }
+  
+  .card-title {
+    color: #854d0e;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-text {
+    color: #a16207;
+    line-height: 1.6;
+  }
+  
+  /* Quiz Styles */
+  .quiz-container {
+    background-color: #fef9c3;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .quiz-progress {
+    height: 0.5rem;
+    background-color: #fde68a;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .progress-bar {
+    background-color: #fbbf24;
+    height: 100%;
+    border-radius: 1rem;
+    transition: width 0.3s ease;
+  }
+  
+  .quiz-question {
+    color: #854d0e;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quiz-options {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .option-button {
+    background-color: #fff;
+    color: #a16207;
+    border: 2px solid #fde68a;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .option-button:hover {
+    background-color: #fef9c3;
+    border-color: #fbbf24;
+  }
+  
+  /* Navigation Buttons */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .nav-button {
+    background-color: #fef9c3;
+    color: #a16207;
+    border: 2px solid #fde68a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #fde68a;
+    border-color: #fbbf24;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* List Styles */
+  .custom-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    background-color: #fff;
+    color: #a16207;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .list-item:hover {
+    background-color: #fef9c3;
+    transform: translateX(4px);
+  }
+  
+  /* Alert Styles */
+  .custom-alert {
+    background-color: #fef9c3;
+    border-left: 4px solid #fbbf24;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .exposition-container {
+      padding: 1rem;
+    }
+    
+    .expo-header {
+      padding: 1.5rem;
+    }
+    
+    .expo-title {
+      font-size: 2rem;
+    }
+    
+    .expo-tabs {
+      flex-wrap: wrap;
+    }
+    
+    .tab-button {
+      width: calc(50% - 0.5rem);
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
