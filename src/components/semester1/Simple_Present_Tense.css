@@ -1,0 +1,210 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+  
+.quiz-container {
+    width: 100%;
+}
+  
+.question-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+  
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.option {
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+  
+.option:hover {
+    background: linear-gradient(135deg, #fbbf24, #8eaa06);
+    color: #ffffff;
+}
+  
+.option:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+    transform: skewX(-25deg);
+    transition: all 0.4s ease;
+}
+  
+.option:hover:before {
+    left: 100%;
+}
+  
+.option.correct {
+    background: linear-gradient(135deg, #c8e6c9, #81c784);
+    border: 2px solid #388e3c;
+    color: #ffffff;
+}
+  
+.option.incorrect {
+    background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+    border: 2px solid #d32f2f;
+    color: #ffffff;
+}
+  
+  
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+  
+  
+  
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+  
+.navigation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fbbf24, #fde68a);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.navigation button:hover {
+    background: linear-gradient(135deg, #fbbf24, #fbbf24);
+    transform: translateY(-2px);
+}
+  
+.navigation button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+  
+  
+.question-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: center;
+}
+  
+.number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64b5f6, #42a5f5);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.number:hover {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    transform: scale(1.1);
+}
+  
+.number.active {
+    background: linear-gradient(135deg, #15f309, #f4ec0a);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+  
+  
+.score-section {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+  
+.score-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #42c655;
+}
+  
+.score-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+  
+.score-section button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fbbf24, #fde68a);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.score-section button:hover {
+    background: linear-gradient(135deg, #fbbf24, #fbbf24);
+    transform: translateY(-2px);
+}
+  
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
