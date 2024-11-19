@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,7 @@ body {
     top: 0;
     width: 45%;
     height: 100%;
-    background: linear-gradient(45deg, #FFB100, #FF9500);
+    background: linear-gradient(45deg, #00f2ff, #006aff);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
     padding: 40px;
     color: white;
@@ -57,8 +56,6 @@ body {
     opacity: 0.9;
 }
 
-/* Decorative elements */
- 
 .shapes {
     position: absolute;
     bottom: 40px;
@@ -140,18 +137,18 @@ body {
 
 .form-group input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #FFB100;
+    box-shadow: 0 0 0 2px #00a6ff;
     background: white;
 }
 
 .form-group input:focus + i {
-    color: #FFB100;
+    color: #00a6ff;
 }
 
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #FFB100, #FF9500);
+    background: linear-gradient(45deg, #00f2ff, #006aff);
     border: none;
     border-radius: 10px;
     color: white;
@@ -166,76 +163,7 @@ body {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 177, 0, 0.3);
-}
-
-.social-login {
-    margin-top: 35px;
-    text-align: center;
-}
-
-.social-login p {
-    color: #666;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.social-login p::before,
-.social-login p::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 30%;
-    height: 1px;
-    background: #ddd;
-}
-
-.social-login p::before {
-    left: 0;
-}
-
-.social-login p::after {
-    right: 0;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid #eee;
-    background: white;
-}
-
-.social-icons a i {
-    font-size: 22px;
-}
-
-.social-icons .google {
-    color: #DB4437;
-}
-
-.social-icons .microsoft {
-    color: #2F2F2F;
-}
-
-.social-icons .github {
-    color: #333;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 119, 255, 0.45);
 }
 
 .form-footer {
@@ -244,7 +172,7 @@ body {
 }
 
 .form-footer a {
-    color: #FFB100;
+    color: #00a6ff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -253,24 +181,6 @@ body {
     text-decoration: underline;
 }
 
-.forgot-password {
-    text-align: right;
-    margin-top: -15px;
-    margin-bottom: 25px;
-}
-
-.forgot-password a {
-    color: #666;
-    font-size: 14px;
-    text-decoration : none;
-    transition: color 0.3s ease;
-}
-
-.forgot-password a:hover {
-    color: #FFB100;
-}
-
-/* Animation for page load */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -285,6 +195,7 @@ body {
 .form-container {
     animation: slideIn 0.5s ease-out;
 }
+
 .login-container {
     width: 300px;
     margin: 100px auto;
@@ -293,28 +204,28 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     text-align: center;
-  }
+}
   
-  .login-container h2 {
+.login-container h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
-  }
+}
   
-  .form-group {
+.form-group {
     margin-bottom: 15px;
-  }
+}
   
-  .form-group input {
+.form-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-  }
+}
   
-  .login-btn {
+.login-btn {
     width: 100%;
     padding: 10px;
     background: #ff9500;
@@ -324,9 +235,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
-  }
+}
   
-  .login-btn:hover {
+.login-btn:hover {
     background: #ffb100;
-  }
-  
+}

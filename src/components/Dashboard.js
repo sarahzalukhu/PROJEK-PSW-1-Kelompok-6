@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css'; 
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
-function Dashboard () {
+function Dashboard() {
+    const [isDropdownOneOpen, setIsDropdownOneOpen] = useState(false);
+    const [isDropdownTwoOpen, setIsDropdownTwoOpen] = useState(false);
+
+    const toggleDropdownOne = () => {
+        setIsDropdownOneOpen(prevState => !prevState);
+    };
+
+    const toggleDropdownTwo = () => {
+        setIsDropdownTwoOpen(prevState => !prevState);
+    };
+
     return (
         <div className="dashboard">
             <aside className="sidebar">
@@ -55,31 +66,49 @@ function Dashboard () {
                 </div>
             </aside>
 
-            
             <main className="main-content">
-                
                 <header>
-                    <h1>Welcome, [User]</h1>
-                    <p>Here’s an overview of your school activities</p>
+                    <h1>Welcome, [User ]</h1>
+                    <p>Here's an overview of your school activities</p>
                 </header>
 
-            
                 <section className="overview">
                     <div className="card schedule">
-                        <h3>Today's Schedule</h3>
-                        <p>Math, Science, History</p>
+                        <h3>Material Semester 1</h3>
+                        <button className="dropdown-toggle" onClick={toggleDropdownOne}>
+                            Semester 1
+                        </button>
+                        {isDropdownOneOpen && (
+                            <div className="dropdown-menu">
+                                <a href="/greetings&Introduction" className="dropdown-item">Greetings And Introduction</a>
+                                <a href="/recount text" className="dropdown-item">Recount Text</a>
+                                <a href="/descriptive text" className="dropdown-item">Descriptive Text</a>
+                                <a href="/simple present tense" className="dropdown-item">Simple Present Tense</a>
+                                <a href="/informal letters" className="dropdown-item">Informal Letters</a>
+                            </div>
+                        )}
                     </div>
                     <div className="card assignments">
-                        <h3>Upcoming Assignments</h3>
-                        <p>Complete Chapter 3 in Math</p>
+                        <h3>Material Semester 2</h3>
+                        <button className="dropdown-toggle" onClick={toggleDropdownTwo}>
+                            Semester 2
+                        </button>
+                        {isDropdownTwoOpen && (
+                            <div className="dropdown-menu">
+                                <a href="/narative text" className="dropdown-item">Narative Text</a>
+                                <a href="/procedural text" className="dropdown-item">Procedural Text</a>
+                                <a href="/exposition text" className="dropdown-item">Exposition Text</a>
+                                <a href="/present continuous tense" className="dropdown-item">Present Continuous Tense</a>
+                                <a href="/report text" className="dropdown-item">Report Text</a>
+                            </div>
+                        )}
                     </div>
                     <div className="card notifications">
                         <h3>Notifications</h3>
-                        <p>Don’t forget to submit your project by Friday.</p>
+                        <p>Don't forget to submit your project by Friday.</p>
                     </div>
                 </section>
 
-            
                 <section className="analytics">
                     <div className="chart">
                         <h3>Attendance</h3>
@@ -87,7 +116,7 @@ function Dashboard () {
                     </div>
                     <div className="chart">
                         <h3>Grades</h3>
-                        <canvas id="gradesChart"></canvas>
+                        < canvas id="gradesChart"></canvas>
                     </div>
                     <div className="chart">
                         <h3>Achievements</h3>
@@ -120,7 +149,6 @@ function Dashboard () {
                     </div>
                 </section>
 
-            
                 <section className="additional-info">
                     <div className="card class-stats">
                         <h3>Class Statistics</h3>
