@@ -5,13 +5,16 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
     const [isDropdownOneOpen, setIsDropdownOneOpen] = useState(false);
     const [isDropdownTwoOpen, setIsDropdownTwoOpen] = useState(false);
+    const [isDropdownThreeOpen, setIsDropdownThreeOpen] = useState(false);
 
     const toggleDropdownOne = () => {
         setIsDropdownOneOpen(prevState => !prevState);
     };
-
     const toggleDropdownTwo = () => {
         setIsDropdownTwoOpen(prevState => !prevState);
+    };
+    const toggleDropdownThree = () => {
+        setIsDropdownThreeOpen(prevState => !prevState);
     };
 
     return (
@@ -104,8 +107,16 @@ function Dashboard() {
                         )}
                     </div>
                     <div className="card notifications">
-                        <h3>Notifications</h3>
-                        <p>Don't forget to submit your project by Friday.</p>
+                    <h3>Quiz</h3>
+                        <button className="dropdown-toggle" onClick={toggleDropdownThree}>
+                            Quiz
+                        </button>
+                        {isDropdownThreeOpen && (
+                            <div className="dropdown-menu">
+                                <a href="/quiz 1" className="dropdown-item">Quiz Semester 1</a>
+                                <a href="/quiz 2" className="dropdown-item">Quiz Semester 2</a>
+                            </div>
+                        )}
                     </div>
                 </section>
 
