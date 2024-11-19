@@ -1,152 +1,150 @@
 import React, { useState } from 'react';
-import './Exposition.css';
 
-function Report_Text() {
+function ReportText() {
   const [activeTab, setActiveTab] = useState('definition');
   const [showQuiz, setShowQuiz] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showResult, setShowResult] = useState(false);
 
   const questions = [
-    // Tambahkan pertanyaan untuk quiz
+    {
+      question: "What is the main purpose of a report text?",
+      options: [
+        "To describe a sequence of events",
+        "To provide factual information about a topic",
+        "To entertain readers with a story",
+        "To persuade readers to agree with an argument"
+      ],
+      correct: 1
+    },
+    {
+      question: "Which of the following is NOT a feature of report texts?",
+      options: [
+        "Use of general nouns",
+        "Detailed facts and data",
+        "Imaginative storytelling",
+        "Present tense for timeless truths"
+      ],
+      correct: 2
+    },
+    {
+      question: "What is typically included in the conclusion of a report text?",
+      options: [
+        "A personal opinion",
+        "A summary of findings",
+        "A moral lesson",
+        "A new argument"
+      ],
+      correct: 1
+    },
+    {
+      question: "Which language feature is common in report texts?",
+      options: [
+        "Past tense for events",
+        "Persuasive phrases",
+        "Technical terms and formal language",
+        "First-person point of view"
+      ],
+      correct: 2
+    }
   ];
 
   function handleAnswer(index) {
-    // Logika untuk menilai jawaban dan update score
+    if (index === questions[currentQuestion].correct) {
+      setScore(score + 1);
+    }
+
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResult(true);
+    }
   }
 
-  const expositionContent = {
+  const reportContent = {
     definition: (
       <>
-        <h3 className="card-title">Pengertian Teks Eksposisi</h3>
-        <p className="card-text">
-          Teks eksposisi adalah jenis teks yang bertujuan untuk menjelaskan atau memaparkan
-          suatu pendapat, gagasan, atau keyakinan yang didukung oleh fakta-fakta dan argumen yang kuat.
+        <h3>Definition of Report Text</h3>
+        <p>
+          A report text is a type of informational text that provides factual descriptions of an object, phenomenon, or situation. It is written to inform the reader about the characteristics, classifications, and functions of the topic being described.
         </p>
-        <div className="custom-alert">
-          <h5 className="card-title">Tujuan Teks Eksposisi:</h5>
-          <ul className="custom-list">
-            <li className="list-item">Memberikan informasi yang jelas kepada pembaca</li>
-            <li className="list-item">Menjelaskan suatu proses atau konsep</li>
-            <li className="list-item">Mengembangkan sebuah argumen</li>
-            <li className="list-item">Meyakinkan pembaca dengan fakta dan data</li>
-          </ul>
-        </div>
       </>
     ),
     structure: (
       <>
-        <h3 className="card-title">Struktur Teks Eksposisi</h3>
-        <p className="card-text">
-          Struktur teks eksposisi terdiri dari tesis, argumentasi, dan penegasan ulang.
-        </p>
+        <h3>Structure of Report Text</h3>
+        <ul>
+          <li><strong>General Classification:</strong> Introduces the topic and provides an overview.</li>
+          <li><strong>Description:</strong> Explains the topic in detail, including its features, behaviors, and uses.</li>
+          <li><strong>Optional Conclusion:</strong> Summarizes the information or highlights key points.</li>
+        </ul>
       </>
     ),
     characteristics: (
       <>
-        <h3 className="card-title">Ciri-ciri Teks Eksposisi</h3>
-        <p className="card-text">
-          Ciri-ciri teks eksposisi meliputi bahasa yang lugas dan informatif, data yang akurat, dan
-          penggunaan kata-kata pendukung argumentasi.
-        </p>
+        <h3>Characteristics of Report Text</h3>
+        <ul>
+          <li>Uses general nouns (e.g., "Mammals," "Volcanoes").</li>
+          <li>Written in the present tense for universal truths.</li>
+          <li>Uses technical terms and formal language.</li>
+          <li>Provides factual and objective information.</li>
+        </ul>
       </>
     ),
     examples: (
       <>
-        <h3 className="card-title">Contoh Teks Eksposisi</h3>
-        <p className="card-text">
-          Contoh teks eksposisi bisa berupa artikel ilmiah, esai opini, dan laporan argumentatif.
-        </p>
+        <h3>Examples of Report Text</h3>
+        <div>
+          <p><strong>Topic:</strong> Penguins</p>
+          <p><strong>General Classification:</strong> Penguins are aquatic, flightless birds that are highly adapted to life in the water.</p>
+          <p><strong>Description:</strong></p>
+          <ul>
+            <li>They have a streamlined body and strong flippers for swimming.</li>
+            <li>Penguins live mostly in the Southern Hemisphere.</li>
+            <li>They feed on fish, squid, and other forms of sea life caught while swimming.</li>
+          </ul>
+        </div>
       </>
     ),
   };
 
   return (
-    <div className="exposition-container">
-      {/* Header Section */}
-      <div className="expo-header fade-in">
-        <h1 className="expo-title">Exposition Text</h1>
-        <p className="expo-subtitle">Pembelajaran tentang teks eksposisi dalam Bahasa Inggris</p>
-        <button 
-          className="nav-button"
-          onClick={() => setShowQuiz(!showQuiz)}
-        >
-          {showQuiz ? 'Kembali ke Materi' : 'Mulai Quiz'}
-        </button>
+    <div>
+      <h1>Report Text</h1>
+      <div>
+        <button onClick={() => setActiveTab('definition')}>Definition</button>
+        <button onClick={() => setActiveTab('structure')}>Structure</button>
+        <button onClick={() => setActiveTab('characteristics')}>Characteristics</button>
+        <button onClick={() => setActiveTab('examples')}>Examples</button>
+        <button onClick={() => setShowQuiz(!showQuiz)}>{showQuiz ? 'Close Quiz' : 'Take Quiz'}</button>
       </div>
-
-      {showQuiz ? (
-        <div className="quiz-container fade-in">
-          <h3 className="card-title">Quiz Pemahaman Materi</h3>
-          <div className="quiz-progress">
-            <div 
-              className="progress-bar"
-              style={{width: `${(currentQuestion + 1) * 100 / questions.length}%`}}
-            />
-          </div>
-          <h4 className="quiz-question">{questions[currentQuestion]?.question}</h4>
-          <div className="quiz-options">
-            {questions[currentQuestion]?.options.map((option, index) => (
-              <button
-                key={index}
-                className="option-button"
-                onClick={() => handleAnswer(index)}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="expo-tabs">
-            {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
-              <button 
-                key={tab}
-                className={`tab-button ${activeTab === tab ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </div>
-
-          <div className="content-card fade-in">
-            {expositionContent[activeTab]}
-          </div>
-
-          <div className="nav-buttons">
-            <button 
-              className="nav-button"
-              onClick={() => {
-                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
-                const currentIndex = tabs.indexOf(activeTab);
-                if (currentIndex > 0) {
-                  setActiveTab(tabs[currentIndex - 1]);
-                }
-              }}
-              disabled={activeTab === 'definition'}
-            >
-              Sebelumnya
-            </button>
-            <button 
-              className="nav-button"
-              onClick={() => {
-                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
-                const currentIndex = tabs.indexOf(activeTab);
-                if (currentIndex < tabs.length - 1) {
-                  setActiveTab(tabs[currentIndex + 1]);
-                }
-              }}
-              disabled={activeTab === 'examples'}
-            >
-              Selanjutnya
-            </button>
-          </div>
-        </>
-      )}
+      <div>
+        {showQuiz ? (
+          showResult ? (
+            <div>
+              <h3>Your Score: {score}/{questions.length}</h3>
+              <button onClick={() => {
+                setShowQuiz(false);
+                setCurrentQuestion(0);
+                setScore(0);
+                setShowResult(false);
+              }}>Restart</button>
+            </div>
+          ) : (
+            <div>
+              <h3>{questions[currentQuestion].question}</h3>
+              {questions[currentQuestion].options.map((option, index) => (
+                <button key={index} onClick={() => handleAnswer(index)}>{option}</button>
+              ))}
+            </div>
+          )
+        ) : (
+          reportContent[activeTab]
+        )}
+      </div>
     </div>
   );
 }
 
-export default Report_Text;
+export default ReportText;
