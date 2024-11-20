@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Exposition.css';
 
 function Present_Continuous_Tense() {
   const [activeTab, setActiveTab] = useState('definition');

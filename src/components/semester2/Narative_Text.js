@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Exposition.css'
+import './Exposition.css';
 
 function Narrative_Text() {
   const [activeTab, setActiveTab] = useState('definition');
