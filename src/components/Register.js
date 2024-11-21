@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -14,14 +15,14 @@ function Register() {
     };     
 
     const handleButtonClick  = () => {
-        if (!email || !password || !confirmPassword) {
+        if (!username ||  !email || !password || !confirmPassword) {
             alert("Mohon isi semua kolom sebelum melanjutkan!");
         } else {
             alert("Selamat, akun anda berhasil didaftarkan!");
         }
     };
       
-    const newUser = { email, password };
+    const newUser = { username, password };
     localStorage.setItem('user', JSON.stringify(newUser));
 
     return (
@@ -42,6 +43,11 @@ function Register() {
                     <p>Silakan isi formulir untuk membuat akun</p>
                 </div>
                 <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <input type="text" placeholder="Username" value={username}
+                            onChange={(e) => setUsername(e.target.value)} required />
+                        <i class="fas fa-user"></i>
+                    </div>
                     <div className="form-group">
                         <input type="email" placeholder="Email" value={email}
                             onChange={(e) => setEmail(e.target.value)} required />

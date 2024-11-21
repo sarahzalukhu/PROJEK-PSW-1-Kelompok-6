@@ -3,17 +3,18 @@ import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 
 function Login () {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        localStorage.setItem('username', username);
         navigate('/dashboard');
     };
 
     const handleButtonClick  = () => {
-        if (!email || !password) {
+        if (!username || !password) {
             alert("Mohon isi semua kolom sebelum melanjutkan!");
         } else {
             alert("Selamat, anda telah berhasil masuk!");
@@ -25,7 +26,7 @@ function Login () {
             <div className="diagonal-bg">
                 <div className="welcome-text">
                     <h1>Welcome Back!</h1>
-                    <p>Selamat datang ke website KuPintar. Mari lanjutkan perjalanan belajar Anda!</p>
+                    <p>Selamat datang ke website Elang. Mari lanjutkan perjalanan belajar Anda!</p>
                 </div>
                 <div className="shapes">
                     <div className="shape shape-1"></div>
@@ -39,9 +40,9 @@ function Login () {
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <input type="email" placeholder="Email" value={email}
-                            onChange={(e) => setEmail(e.target.value)} required />
-                        <i className="fas fa-envelope"></i>
+                        <input type="text" placeholder="Username" value={username}
+                            onChange={(e) => setUsername(e.target.value)} required />
+                        <i class="fas fa-user"></i>
                     </div>
                     <div className="form-group">
                         <input type="password" placeholder="Password" value={password}

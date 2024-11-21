@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Dashboard.css'; 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from './1.png';
+import gambar1 from './Tristan.jpg';
+import gambar2 from './Tristan.jpg';
+import gambar3 from './Tristan.jpg';
+import gambar4 from './Tristan.jpg';
 
 function Dashboard() {
     const [isDropdownOneOpen, setIsDropdownOneOpen] = useState(false);
     const [isDropdownTwoOpen, setIsDropdownTwoOpen] = useState(false);
     const [isDropdownThreeOpen, setIsDropdownThreeOpen] = useState(false);
+    const [username, setUsername] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        if (storedUsername) {
+            setUsername(storedUsername);
+        }
+    }, []);
 
     const toggleDropdownOne = () => {
         setIsDropdownOneOpen(prevState => !prevState);
@@ -17,12 +31,16 @@ function Dashboard() {
         setIsDropdownThreeOpen(prevState => !prevState);
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('username');
+        navigate('/login');
+    };
+
     return (
         <div className="dashboard">
             <aside className="sidebar">
                 <div className="logo">
-                    <img src="./imange.png" alt="" />
-                    <h2>KuPintar</h2>
+                    <img src={logo} alt="Elang"/>
                 </div>
                 <nav>
                     <ul>
@@ -32,47 +50,47 @@ function Dashboard() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/schedule">
-                                <i className="fas fa-calendar-alt"></i> Schedule
+                            <Link to="/dashboard">
+                                <i className="fas fa-calendar-alt"></i> Semester 1
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#grades">
-                                <i className="fas fa-graduation-cap"></i> Grades
-                            </a>
+                            <Link to="/dashboard">
+                                <i className="fas fa-calendar-alt"></i> Semester 2
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#announcements">
-                                <i className="fas fa-bullhorn"></i> Announcements
-                            </a>
+                            <Link to="/dashboard">
+                                <i className="fas fa-calendar-alt"></i> Quiz 1
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#profile">
-                                <i className="fas fa-user"></i> Profile
-                            </a>
+                            <Link to="/dashboard">
+                                <i className="fas fa-calendar-alt"></i> Quiz 2
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#settings">
-                                <i className="fas fa-cogs"></i> Settings
-                            </a>
+                            <button onClick={handleLogout} className="logout-button">
+                                <i className="fas fa-sign-out-alt"></i> Logout
+                            </button>
                         </li>
                     </ul>
                 </nav>
                 <div className="active-teachers">
                     <p>Active Teachers</p>
                     <div className="teacher-icons">
-                        <img src="/teacher1.jpg" alt="Teacher 1" />
-                        <img src="/teacher2.jpg" alt="Teacher 2" />
-                        <img src="/teacher3.jpg" alt="Teacher 3" />
-                        <span>+15</span>
+                        <img src={gambar1} alt="Andrey"/>
+                        <img src={gambar2} alt="Markus"/>
+                        <img src={gambar3} alt="Sarah"/>
+                        <img src={gambar4} alt="Tristan"/>
                     </div>
                 </div>
             </aside>
 
             <main className="main-content">
                 <header>
-                    <h1>Welcome, [User ]</h1>
-                    <p>Here's an overview of your school activities</p>
+                    <h1>Welcome back, {username}</h1>
+                    <p>Let's get started with your course</p>
                 </header>
 
                 <section className="overview">
@@ -109,12 +127,12 @@ function Dashboard() {
                     <div className="card notifications">
                     <h3>Quiz</h3>
                         <button className="dropdown-toggle" onClick={toggleDropdownThree}>
-                            Quiz
+                            Test Your Knowledge
                         </button>
                         {isDropdownThreeOpen && (
                             <div className="dropdown-menu">
-                                <a href="/quiz 1" className="dropdown-item">Quiz Semester 1</a>
-                                <a href="/quiz 2" className="dropdown-item">Quiz Semester 2</a>
+                                <a href="/quiz 1" className="dropdown-item">Quizes for Semester 1</a>
+                                <a href="/quiz 2" className="dropdown-item">Quizes for Semester 2</a>
                             </div>
                         )}
                     </div>
@@ -122,7 +140,7 @@ function Dashboard() {
 
                 <section className="analytics">
                     <div className="chart">
-                        <h3>Attendance</h3>
+                        <h3>Continue at Your Last Session</h3>
                         <canvas id="attendanceChart"></canvas>
                     </div>
                     <div className="chart">
@@ -140,20 +158,20 @@ function Dashboard() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1st Place Science Fair</td>
-                                    <td>June 2024</td>
-                                </tr>
-                                <tr>
-                                    <td>Basketball Team MVP</td>
-                                    <td>September 2024</td>
-                                </tr>
-                                <tr>
-                                    <td>Math Olympiad Winner</td>
-                                    <td>October 2024</td>
-                                </tr>
-                                <tr>
-                                    <td>Student of the Month</td>
+                                    <td>Fastest Learners of the Year</td>
                                     <td>November 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Quiz 1 Best Scorer of the Month</td>
+                                    <td>November 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>User of the Month</td>
+                                    <td>August 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Be A Part of Elang's Family</td>
+                                    <td>February 2024</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -162,11 +180,11 @@ function Dashboard() {
 
                 <section className="additional-info">
                     <div className="card class-stats">
-                        <h3>Class Statistics</h3>
+                        <h3>Your Statistics</h3>
                         <ul>
-                            <li>Average Grade: <strong>85%</strong></li>
-                            <li>Top Subject: <strong>Math</strong></li>
-                            <li>Students Passing: <strong>92%</strong></li>
+                            <li>Average Grade: <strong>87%</strong></li>
+                            <li>Top Subject: <strong>Narative Text</strong></li>
+                            <li>Courses left: <strong>24%</strong></li>
                         </ul>
                     </div>
                     <div className="card news">
