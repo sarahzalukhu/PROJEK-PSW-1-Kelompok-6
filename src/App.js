@@ -16,6 +16,7 @@ import PresentContinuousTense from './components/semester2/Present_Continuous_Te
 import ReportText from './components/semester2/Report_Text';
 import Quiz2 from './components/semester2/Quiz2';
 import './App.css';
+import './components/semester1/Quiz.css';
 
 function App() {
   return (
