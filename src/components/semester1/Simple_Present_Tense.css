@@ -14,16 +14,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
     background: #ffffff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 50px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
   
 .quiz-container {
-    width: 100%;
+    min-width: 1190px;
+    min-height:650px;
 }
   
 .question-section h3 {
@@ -67,7 +68,6 @@ body {
     background: rgba(255, 255, 255, 0.3);
     z-index: 0;
     transform: skewX(-25deg);
-    transition: all 0.4s ease;
 }
   
 .option:hover:before {
@@ -93,9 +93,7 @@ body {
     font-size: 1.1rem;
     color: #333;
 }
-  
-  
-  
+   
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -148,6 +146,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: top;
+    margin: 2px;
+    margin-bottom: 25px;
 }
   
 .number:hover {
@@ -195,6 +196,61 @@ body {
 .score-section button:hover {
     background: linear-gradient(135deg, #fbbf24, #fbbf24);
     transform: translateY(-2px);
+}
+
+.answers-list {
+    text-align: left;
+    padding: 0;
+    list-style-type: none;
+    margin: 20px 0;
+    font-family: "Arial", sans-serif;
+}
+  
+.answer-item {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+  
+.answer-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.answer-item strong {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+  
+.correct-answer {
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 2px 5px;
+    background-color: #e8f5e9;
+    border-radius: 4px;
+}
+  
+.correct {
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 2px 5px;
+    background-color: #e8f5e9;
+    border-radius: 4px;
+}
+  
+.incorrect {
+    color: #c62828;
+    font-weight: bold;
+    padding: 2px 5px;
+    background-color: #ffebee;
+    border-radius: 4px;
+    display: inline-block;
 }
   
   
