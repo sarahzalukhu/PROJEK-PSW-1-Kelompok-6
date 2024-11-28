@@ -117,7 +117,6 @@ function Descriptive_Text() {
             <li className="list-item">Focus on Specific Subject</li>
             <li className="list-item">Detail Description</li>
             <li className="list-item">Clear and Organized structure</li>
-            <li className="list-item"></li>
           </ul>
         </div>
         <div className="custom-alert">
