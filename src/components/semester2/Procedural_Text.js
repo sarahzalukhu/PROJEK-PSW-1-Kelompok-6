@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './Semester2.css';
 
-function ReportText() {
+function Procedural_Text() {
   const [activeTab, setActiveTab] = useState('definition');
   const [showQuiz, setShowQuiz] = useState(false);
   const [score, setScore] = useState(0);
@@ -9,44 +10,44 @@ function ReportText() {
 
   const questions = [
     {
-      question: "What is the main purpose of a report text?",
+      question: "What is the primary purpose of procedural text?",
       options: [
-        "To describe a sequence of events",
-        "To provide factual information about a topic",
-        "To entertain readers with a story",
-        "To persuade readers to agree with an argument"
+        "To tell a story",
+        "To explain how to do something",
+        "To describe a historical event",
+        "To express personal feelings"
       ],
       correct: 1
     },
     {
-      question: "Which of the following is NOT a feature of report texts?",
+      question: "What is a key characteristic of procedural text?",
       options: [
-        "Use of general nouns",
-        "Detailed facts and data",
-        "Imaginative storytelling",
-        "Present tense for timeless truths"
+        "Use of descriptive language",
+        "Emotional storytelling",
+        "Step-by-step instructions",
+        "Complex narrative structure"
       ],
       correct: 2
     },
     {
-      question: "What is typically included in the conclusion of a report text?",
+      question: "Which language feature is most important in procedural texts?",
       options: [
-        "A personal opinion",
-        "A summary of findings",
-        "A moral lesson",
-        "A new argument"
+        "Metaphorical language",
+        "Chronological sequence of steps",
+        "Emotional descriptors",
+        "Character development"
       ],
       correct: 1
     },
     {
-      question: "Which language feature is common in report texts?",
+      question: "What typically comes first in a procedural text?",
       options: [
-        "Past tense for events",
-        "Persuasive phrases",
-        "Technical terms and formal language",
-        "First-person point of view"
+        "List of outcomes",
+        "Materials or ingredients needed",
+        "Personal reflection",
+        "Conclusion"
       ],
-      correct: 2
+      correct: 1
     }
   ];
 
@@ -54,7 +55,7 @@ function ReportText() {
     if (index === questions[currentQuestion].correct) {
       setScore(score + 1);
     }
-
+    
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -62,89 +63,221 @@ function ReportText() {
     }
   }
 
-  const reportContent = {
+  const proceduralContent = {
     definition: (
       <>
-        <h3>Definition of Report Text</h3>
-        <p>
-          A report text is a type of informational text that provides factual descriptions of an object, phenomenon, or situation. It is written to inform the reader about the characteristics, classifications, and functions of the topic being described.
+        <h3 className="card-title">Definition of Procedural Text</h3>
+        <p className="card-text">
+          Procedural text is a type of writing that provides clear, step-by-step instructions on how to do something or complete a specific task. Its primary purpose is to guide the reader through a process systematically and precisely.
         </p>
+        <div className="custom-alert">
+          <h5 className="card-title">Key Purposes:</h5>
+          <ul className="custom-list">
+            <li className="list-item">To provide clear, sequential instructions</li>
+            <li className="list-item">To explain how to complete a specific task</li>
+            <li className="list-item">To ensure the reader can successfully follow the process</li>
+            <li className="list-item">To break down complex tasks into manageable steps</li>
+          </ul>
+        </div>
       </>
     ),
     structure: (
       <>
-        <h3>Structure of Report Text</h3>
-        <ul>
-          <li><strong>General Classification:</strong> Introduces the topic and provides an overview.</li>
-          <li><strong>Description:</strong> Explains the topic in detail, including its features, behaviors, and uses.</li>
-          <li><strong>Optional Conclusion:</strong> Summarizes the information or highlights key points.</li>
-        </ul>
+        <h3 className="card-title">Structure of Procedural Text</h3>
+        <div className="custom-alert">
+          <h5 className="card-title">1. Goal/Aim</h5>
+          <ul className="custom-list">
+            <li className="list-item">Clearly states the purpose of the procedure</li>
+            <li className="list-item">Provides context for the task</li>
+          </ul>
+        </div>
+        <div className="custom-alert">
+          <h5 className="card-title">2. Materials/Ingredients</h5>
+          <ul className="custom-list">
+            <li className="list-item">Lists everything needed to complete the task</li>
+            <li className="list-item">Helps readers prepare in advance</li>
+          </ul>
+        </div>
+        <div className="custom-alert">
+          <h5 className="card-title">3. Step-by-Step Instructions</h5>
+          <ul className="custom-list">
+            <li className="list-item">Provides clear, sequential steps</li>
+            <li className="list-item">Uses imperative verbs</li>
+          </ul>
+        </div>
       </>
     ),
     characteristics: (
       <>
-        <h3>Characteristics of Report Text</h3>
-        <ul>
-          <li>Uses general nouns (e.g., "Mammals," "Volcanoes").</li>
-          <li>Written in the present tense for universal truths.</li>
-          <li>Uses technical terms and formal language.</li>
-          <li>Provides factual and objective information.</li>
-        </ul>
+        <h3 className="card-title">Characteristics of Procedural Text</h3>
+        <div className="custom-alert">
+          <h5 className="card-title">Key Features:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Clear and direct language</li>
+            <li className="list-item">Logical sequence of steps</li>
+            <li className="list-item">Precise and concise instructions</li>
+            <li className="list-item">Focus on practical guidance</li>
+          </ul>
+        </div>
+        <div className="custom-alert">
+          <h5 className="card-title">Language Features:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Imperative verbs (e.g., mix, pour, heat)</li>
+            <li className="list-item">Numbered or bulleted steps</li>
+            <li className="list-item">Technical or specific vocabulary</li>
+            <li className="list-item">Time markers and sequence words</li>
+          </ul>
+        </div>
       </>
     ),
     examples: (
       <>
-        <h3>Examples of Report Text</h3>
-        <div>
-          <p><strong>Topic:</strong> Penguins</p>
-          <p><strong>General Classification:</strong> Penguins are aquatic, flightless birds that are highly adapted to life in the water.</p>
-          <p><strong>Description:</strong></p>
-          <ul>
-            <li>They have a streamlined body and strong flippers for swimming.</li>
-            <li>Penguins live mostly in the Southern Hemisphere.</li>
-            <li>They feed on fish, squid, and other forms of sea life caught while swimming.</li>
+        <h3 className="card-title">Examples of Procedural Text</h3>
+        <div className="custom-alert">
+          <h5 className="card-title">Common Types:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Recipes</li>
+            <li className="list-item">DIY instructions</li>
+            <li className="list-item">User manuals</li>
+            <li className="list-item">Science experiment protocols</li>
           </ul>
+        </div>
+        <div className="example-box">
+          <h5>Sample Procedural Text: How to Make Pancakes</h5>
+          <p><strong>Goal:</strong> Create delicious homemade pancakes</p>
+          <p><strong>Materials:</strong>
+            - 1 cup flour
+            - 2 tbsp sugar
+            - 2 tsp baking powder
+            - 1 egg
+            - 3/4 cup milk
+            - 2 tbsp melted butter
+          </p>
+          <p><strong>Steps:</strong>
+            1. Mix dry ingredients in a bowl
+            2. Whisk egg, milk, and melted butter in another bowl
+            3. Combine wet and dry ingredients
+            4. Heat pan and add butter
+            5. Pour batter and cook until bubbles form
+            6. Flip and cook other side until golden
+          </p>
         </div>
       </>
     ),
   };
 
   return (
-    <div>
-      <h1>Report Text</h1>
-      <div>
-        <button onClick={() => setActiveTab('definition')}>Definition</button>
-        <button onClick={() => setActiveTab('structure')}>Structure</button>
-        <button onClick={() => setActiveTab('characteristics')}>Characteristics</button>
-        <button onClick={() => setActiveTab('examples')}>Examples</button>
-        <button onClick={() => setShowQuiz(!showQuiz)}>{showQuiz ? 'Close Quiz' : 'Take Quiz'}</button>
+    <div className="narrative-container">
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Procedural Text</h1>
+        <p className="narrative-subtitle">Understanding Step-by-Step Instructional Writing</p>
+        <button 
+          className="nav-button"
+          onClick={() => {
+            setShowQuiz(!showQuiz);
+            if (!showQuiz) {
+              setCurrentQuestion(0);
+              setScore(0);
+              setShowResult(false);
+            }
+          }}
+        >
+          {showQuiz ? 'Back to Material' : 'Test Your Knowledge'}
+        </button>
       </div>
-      <div>
-        {showQuiz ? (
-          showResult ? (
-            <div>
-              <h3>Your Score: {score}/{questions.length}</h3>
-              <button onClick={() => {
-                setShowQuiz(false);
-                setCurrentQuestion(0);
-                setScore(0);
-                setShowResult(false);
-              }}>Restart</button>
-            </div>
+
+      {showQuiz ? (
+        <div className="quiz-container fade-in">
+          {!showResult ? (
+            <>
+              <h3 className="card-title">Quiz on Procedural Text</h3>
+              <div className="quiz-progress">
+                <div 
+                  className="progress-bar"
+                  style={{width: `${(currentQuestion + 1) * 100 / questions.length}%`}}
+                />
+              </div>
+              <h4 className="quiz-question">{questions[currentQuestion].question}</h4>
+              <div className="quiz-options">
+                {questions[currentQuestion].options.map((option, index) => (
+                  <button
+                    key={index}
+                    className="option-button"
+                    onClick={() => handleAnswer(index)}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
+            </>
           ) : (
-            <div>
-              <h3>{questions[currentQuestion].question}</h3>
-              {questions[currentQuestion].options.map((option, index) => (
-                <button key={index} onClick={() => handleAnswer(index)}>{option}</button>
-              ))}
+            <div className="result-container">
+              <h3>Quiz Complete!</h3>
+              <p>Your score: {score} out of {questions.length}</p>
+              <button 
+                className="nav-button"
+                onClick={() => {
+                  setShowQuiz(false);
+                  setShowResult(false);
+                  setCurrentQuestion(0);
+                  setScore(0);
+                }}
+              >
+                Return to Study Material
+              </button>
             </div>
-          )
-        ) : (
-          reportContent[activeTab]
-        )}
-      </div>
+          )}
+        </div>
+      ) : (
+        <>
+          <div className="narrative-tabs">
+            {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
+              <button 
+                key={tab}
+                className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
+          </div>
+
+          <div className="content-card fade-in">
+            {proceduralContent[activeTab]}
+          </div>
+
+          <div className="nav-buttons">
+            <button 
+              className="nav-button"
+              onClick={() => {
+                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
+                const currentIndex = tabs.indexOf(activeTab);
+                if (currentIndex > 0) {
+                  setActiveTab(tabs[currentIndex - 1]);
+                }
+              }}
+              disabled={activeTab === 'definition'}
+            >
+              Previous
+            </button>
+            <button 
+              className="nav-button"
+              onClick={() => {
+                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
+                const currentIndex = tabs.indexOf(activeTab);
+                if (currentIndex < tabs.length - 1) {
+                  setActiveTab(tabs[currentIndex + 1]);
+                }
+              }}
+              disabled={activeTab === 'examples'}
+            >
+              Next
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }
 
-export default ReportText;
+export default Procedural_Text;
