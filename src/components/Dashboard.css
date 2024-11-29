@@ -4,17 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    display: flex;
-}
-
-.dashboard {
-    display: flex;
-    width: 100%;
-}
-
 .sidebar {
     width: 250px;
     background-color: #00a6ff;
@@ -206,7 +195,7 @@ body {
 .logo img {
     width: 170px; 
     height: auto;
-    margin-left: -28px;
+    margin-left: 6px;
     margin-top: -15px;
 }
 
@@ -237,6 +226,45 @@ body {
 
 .sidebar nav ul li a i {
     margin-right: 10px;
+}
+
+.dropdown-side {
+    background-color: #00a6ff;
+    color: white;
+    border: none;
+    padding: 10px 104px 10px 8px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-side:hover {
+    background-color: #1b9cfe;
+}
+
+.dropdown-list {
+    display: block;
+    position: absolute;
+    background-color: #45aeff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.logout-button {
+    background-color: rgba(212, 25, 0, 0.8);
+    margin-top: 80px;
+    margin-left: 60px;
+    border-radius: 5px;
+    padding: 8px 17px;
+    transition: background-color 0.3s ease;
+    color: rgb(242, 242, 242);
+}
+
+.logout-button:hover {
+    background-color: rgb(132, 0, 0);
 }
 
 .active-teachers {
@@ -287,32 +315,4 @@ h3 {
     color: #333;
     font-size: 22px;
     margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .dashboard {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-
-    .schedule-container {
-        overflow-x: auto;
-    }
-
-    .schedule-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .schedule-time {
-        width: auto;
-    }
 }

@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './Dashboard.css'; 
 import { Link, useNavigate } from 'react-router-dom';
 import logo from './1.png';
-import gambar1 from './Tristan.jpg';
-import gambar2 from './Tristan.jpg';
-import gambar3 from './Tristan.jpg';
-import gambar4 from './Tristan.jpg';
+import guru1 from './Tristan.jpg';
+import guru2 from './Tristan.jpg';
+import guru3 from './Tristan.jpg';
+import guru4 from './Tristan.jpg';
 
 function Dashboard() {
     const [isDropdownOneOpen, setIsDropdownOneOpen] = useState(false);
     const [isDropdownTwoOpen, setIsDropdownTwoOpen] = useState(false);
     const [isDropdownThreeOpen, setIsDropdownThreeOpen] = useState(false);
+    const [isDropdownFourOpen, setIsDropdownFourOpen] = useState(false);
+    const [isDropdownFiveOpen, setIsDropdownFiveOpen] = useState(false);
     const [username, setUsername] = useState(false);
     const navigate = useNavigate();
 
@@ -30,6 +32,12 @@ function Dashboard() {
     const toggleDropdownThree = () => {
         setIsDropdownThreeOpen(prevState => !prevState);
     };
+    const toggleDropdownFour = () => {
+        setIsDropdownFourOpen(prevState => !prevState);
+    };
+    const toggleDropdownFive = () => {
+        setIsDropdownFiveOpen(prevState => !prevState);
+    };
 
     const handleLogout = () => {
         localStorage.removeItem('username');
@@ -45,44 +53,50 @@ function Dashboard() {
                 <nav>
                     <ul>
                         <li className="nav-item">
-                            <Link to="/dashboard">
-                                <i className="fas fa-home"></i> Home
-                            </Link>
+                            <Link to="/dashboard">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/dashboard">
-                                <i className="fas fa-calendar-alt"></i> Semester 1
-                            </Link>
+                            <button className="dropdown-side" onClick={toggleDropdownFour}>Semester 1</button>
+                            {isDropdownFourOpen && (
+                                <div className="dropdown-list">
+                                    <a href="/greetings&Introduction" className="dropdown-itemm">Greetings And Introduction</a>
+                                    <a href="/recount text" className="dropdown-itemm">Recount Text</a>
+                                    <a href="/descriptive text" className="dropdown-itemm">Descriptive Text</a>
+                                    <a href="/simple present tense" className="dropdown-itemm">Simple Present Tense</a>
+                                    <a href="/informal letters" className="dropdown-itemm">Informal Letters</a>
+                                </div>
+                            )}
                         </li>
                         <li className="nav-item">
-                            <Link to="/dashboard">
-                                <i className="fas fa-calendar-alt"></i> Semester 2
-                            </Link>
+                            <button className="dropdown-side" onClick={toggleDropdownFive}>Semester 2</button>
+                            {isDropdownFiveOpen && (
+                                <div className="dropdown-list">
+                                    <a href="/narative text" className="dropdown-itemm">Narative Text</a>
+                                    <a href="/procedural text" className="dropdown-itemm">Procedural Text</a>
+                                    <a href="/exposition text" className="dropdown-itemm">Exposition Text</a>
+                                    <a href="/present continuous tense" className="dropdown-itemm">Present Continuous Tense</a>
+                                    <a href="/report text" className="dropdown-itemm">Report Text</a>
+                                </div>
+                            )}
                         </li>
                         <li className="nav-item">
-                            <Link to="/dashboard">
-                                <i className="fas fa-calendar-alt"></i> Quiz 1
-                            </Link>
+                            <Link to="/quiz 1">Quiz 1</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/dashboard">
-                                <i className="fas fa-calendar-alt"></i> Quiz 2
-                            </Link>
+                            <Link to="/quiz 2">Quiz 2</Link>
                         </li>
                         <li className="nav-item">
-                            <button onClick={handleLogout} className="logout-button">
-                                <i className="fas fa-sign-out-alt"></i> Logout
-                            </button>
+                            <button onClick={handleLogout} className="logout-button">Logout</button>
                         </li>
                     </ul>
                 </nav>
                 <div className="active-teachers">
                     <p>Active Teachers</p>
                     <div className="teacher-icons">
-                        <img src={gambar1} alt="Andrey"/>
-                        <img src={gambar2} alt="Markus"/>
-                        <img src={gambar3} alt="Sarah"/>
-                        <img src={gambar4} alt="Tristan"/>
+                        <img src={guru1} alt="Andrey"/>
+                        <img src={guru2} alt="Markus"/>
+                        <img src={guru3} alt="Sarah"/>
+                        <img src={guru4} alt="Tristan"/>
                     </div>
                 </div>
             </aside>
@@ -182,15 +196,16 @@ function Dashboard() {
                     <div className="card class-stats">
                         <h3>Your Statistics</h3>
                         <ul>
-                            <li>Average Grade: <strong>87%</strong></li>
-                            <li>Top Subject: <strong>Narative Text</strong></li>
-                            <li>Courses left: <strong>24%</strong></li>
+                            <li>Average Grade: <strong>86%</strong></li>
+                            <li>Top Subject: <strong>Simple Present Tense</strong></li>
+                            <li>Courses left: <strong>56%</strong></li>
                         </ul>
                     </div>
                     <div className="card news">
                         <h3>Latest News</h3>
-                        <p>School Science Fair next month. Get ready!</p>
-                        <p>Basketball team wins regional championship.</p>
+                        <p>UPDATE!!! You are the top scorer of the quiz 1, go claim your reward!</p>
+                        <p>Elang is curently the number 1 language learning apps, claim your reward now!</p>
+                        <p>Hello {username}, We've just added a new course, let's learn about Report Text :)</p>
                     </div>
                 </section>
             </main>

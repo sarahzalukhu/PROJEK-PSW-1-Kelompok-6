@@ -5,20 +5,29 @@ import './Login.css';
 function Login () {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [attempts, setAttempts] = useState(0);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        localStorage.setItem('username', username);
-        navigate('/dashboard');
+        const storedUser  = JSON.parse(localStorage.getItem('user'));
+
+        if (attempts >= 10) {
+            alert("Anda sudah mencoba terlalu banyak, coba daftarkan akun Anda terlebih dahulu!");
+            return;
+        }
+
+        if (storedUser && username === storedUser.username && password === storedUser.password) {
+            alert("Selamat, anda telah berhasil masuk!");
+            localStorage.setItem('username', username);
+            navigate('/dashboard');
+        } else {
+            alert("Username atau password yang anda masukkan salah. Mohon coba lagi!");
+            setAttempts(attempts + 1);
+        }
     };
 
     const handleButtonClick  = () => {
-        if (!username || !password) {
-            alert("Mohon isi semua kolom sebelum melanjutkan!");
-        } else {
-            alert("Selamat, anda telah berhasil masuk!");
-        }
     };
 
     return (
@@ -42,12 +51,10 @@ function Login () {
                     <div className="form-group">
                         <input type="text" placeholder="Username" value={username}
                             onChange={(e) => setUsername(e.target.value)} required />
-                        <i class="fas fa-user"></i>
                     </div>
                     <div className="form-group">
                         <input type="password" placeholder="Password" value={password}
                             onChange={(e) => setPassword(e.target.value)} required />
-                        <i className="fas fa-lock"></i>
                     </div>
                     <button type="submit" className="submit-btn" onClick={handleButtonClick}>Login</button>
                     <div className="form-footer">

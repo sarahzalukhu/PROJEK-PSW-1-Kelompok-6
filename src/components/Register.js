@@ -11,19 +11,23 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (password !== confirmPassword) {
+            alert("Password yang anda masukkan masih belum sama, mohon coba kembali!");
+            return;
+        } else if (!username ||  !email || !password || !confirmPassword) {
+            alert("Mohon isi semua kolom sebelum melanjutkan!");
+            return;
+        } else {
+            alert("Selamat, akun anda berhasil di daftarkan!");
+        }
+      
+        const newUser = { username, password };
+        localStorage.setItem('user', JSON.stringify(newUser));
         navigate('/login');
     };     
 
     const handleButtonClick  = () => {
-        if (!username ||  !email || !password || !confirmPassword) {
-            alert("Mohon isi semua kolom sebelum melanjutkan!");
-        } else {
-            alert("Selamat, akun anda berhasil didaftarkan!");
-        }
     };
-      
-    const newUser = { username, password };
-    localStorage.setItem('user', JSON.stringify(newUser));
 
     return (
         <div className="container">
@@ -46,22 +50,18 @@ function Register() {
                     <div className="form-group">
                         <input type="text" placeholder="Username" value={username}
                             onChange={(e) => setUsername(e.target.value)} required />
-                        <i class="fas fa-user"></i>
                     </div>
                     <div className="form-group">
                         <input type="email" placeholder="Email" value={email}
                             onChange={(e) => setEmail(e.target.value)} required />
-                        <i className="fas fa-envelope"></i>
                     </div>
                     <div className="form-group">
                         <input type="password" placeholder="Password" value={password}
                             onChange={(e) => setPassword(e.target.value)} required />
-                        <i className="fas fa-lock"></i>
                     </div>
                     <div className="form-group">
                         <input type="password" placeholder="Confirm Password" value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)} required />
-                        <i className="fas fa-lock"></i>
                     </div>
                     <button type="submit" className="submit-btn" onClick={handleButtonClick}>Register</button>
                     <div className="form-footer">
