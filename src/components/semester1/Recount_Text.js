@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Recount_Text.css';
+import './Descriptive_Text.css';
+
 
 function Recount_Text() {
   const [activeTab, setActiveTab] = useState('definition');
@@ -10,55 +11,46 @@ function Recount_Text() {
 
   const questions = [
     {
-      question: "What is the main purpose of a recount text?",
+      question: "Which sentence is in the Simple Present Tense?",
       options: [
-        "To describe a process",
-        "To entertain the reader with fiction ",
-        "To retell past events or experiences",
-        " To argue about a specific issue"
+        "She is reading a book",
+        "She reads books every weekend ",
+        "She read a book yesterday",
+        "She will read a book"
       ],
       correct: 2
     },
     {
-      question: "What is the correct structure of a recount text?",
-      options: [
-        "Introduction - Argument - Conclusion",
-        "Orientation - Events - Reorientation",
-        "Title - Body - Recommendation",
-        "Thesis - Evidence - Conclusion"
-      ],
-      correct: 1
-    },
-    {
-      question: "Which of the following is NOT a characteristic of recount text?",
-      options: [
-        "Focus on specific people, places, or events",
-        "Written in past tense",
-        "Contains a sequence of events in chronological order",
-        "Uses a lot of arguments and persuasion"
-      ],
-      correct: 3
-    },
-    {
-      question: "Which sentence is an example of an orientation in a recount text?",
-      options: [
-        "First, we arrived at the airport and checked in.",
-        "The vacation was amazing, and we created unforgettable memories.",
-        "Last summer, my family and I went to Bali for a holiday.",
-        "After exploring the market, we went back to the hotel to rest.",
-      ],
-      correct: 2
-    },
-    {
-    question: "Which of these is a language feature commonly used in recount text?",
-    options: [
-        "Use of modal verbs like should and must",
-        "Use of action verbs in the past tense",
-        "Use of hypothetical phrases like if I were",
-        "Use of persuasive techniques",
+        question: "What is the correct form of the sentence? ",
+      
+        options: [
+          "The mountain stands taall and majestic",
+          "The boy runs very fast",
+          "She is writing a letter",
+          "I will visit the park tomorrow"
         ],
         correct: 1
-    }
+      },
+      {
+        question: "Which these is commonly used in descriptive text?",
+        options: [
+          "Past Tense",
+          "Future Tense",
+          "Present Tense",
+          "Present continuous tense"
+        ],
+        correct: 1
+      },
+      {
+        question: "What are two main parts of the structure of descriptive text?",
+        options: [
+          "Introduction and Conclusion",
+          "To introduce the characters",
+          "To present the conflict or problem",
+          "To provide a moral lesson"
+        ],
+        correct: 2
+      }
   ];
 
   function handleAnswer(index) {
@@ -73,99 +65,104 @@ function Recount_Text() {
     }
   }
 
-  const recountContent = {
+  const expositionContent = {
     definition: (
       <>
         <h3 className="card-title">Definition of Recount Text</h3>
         <p className="card-text">
-        Recount text is a text which retells events, or experiences in the past.        </p>
+         A Recount Text is a type of text that retells or describes events,experiences,or activities that happened in the past.The main purpose of this text is to inform or entertain the reader by telling a story or recounting an event that occurred.
+        </p>
         <div className="custom-alert">
           <h5 className="card-title">Key Purposes:</h5>
           <ul className="custom-list">
-            <li className="list-item">To Describe : Past events or experiences in detail, presenting them in chronological order. </li>
-            <li className="list-item">To Inform : Educate readers about n event or experience, whether it is personal, historical, or factual. It conveys specific details that help the audience learn about the occurrence and its significance. </li>
-            <li className="list-item">To engage The Audience : Aim to engage the audience by using vivid language, personal emotions, and relatable stories.</li>
-            <li className="list-item">To Promote : Ideas, lessons, or values by highlighting outcomes or moral reflections from the events. </li>
+            <li className="list-item">To inform or entertain by telling past events </li>
+            <li className="list-item">To share personal experience or historical events</li>
+            <li className="list-item">To describe what happened in a particular situation in chronological order</li>
+
           </ul>
         </div>
       </>
     ),
     structure: (
       <>
-        <h3 className="card-title">Structure of Recount Text</h3>
+        <h3 className="card-title">Structure of Exposition Text</h3>
         <div className="custom-alert">
           <h5 className="card-title">1. Orientation </h5>
           <ul className="custom-list">
-            <li className="list-item">Introduces the setting, characters, and context of the event.</li>
-            <li className="list-item">Example : "Last summer, my family and I went to Bali for a vacation".</li>
+            <li className="list-item">This section the background information, answering questions.</li>
+            <li className="list-item">Example: who was involved? </li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">2. Events</h5>
+          <h5 className="card-title">2.Events</h5>
           <ul className="custom-list">
-            <li className="list-item">Describes the series of events in chronological order.
-            Focuses on what happened, with details and sometimes personal feelings.</li>
-            <li className="list-item">Uses time connectives like first, then, after that, finally, etc.</li>
-            <li className="list-item">Example: "On the first day, we visited the famous beaches and took lots of pictures. The next day, we explored the local markets and tried some traditional dishes."</li>
+            <li className="list-item">The sequence of events in chronological order.This part describes the key events that took place</li>
+            <li className="list-item">Often told in the past tense </li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">3. Reorientation (conclusion)</h5>
+          <h5 className="card-title">3.Reorientation </h5>
           <ul className="custom-list">
-            <li className="list-item">Summarizes the experience or reflects on it.
-            Often includes personal comments, lessons learned, or final thoughts.</li>
-            <li className="list-item">Often provides a moral or lesson</li>
-            <li className="list-item">Example: "It was a wonderful trip that brought us closer as a family, and I’ll always treasure those memories."</li>
+            <li className="list-item">This section reflects on the events and may provide a conclusion or personal comment.</li>
+            <li className="list-item">Not always present in every recount text</li>
+
           </ul>
         </div>
       </>
     ),
     characteristics: (
       <>
-        <h3 className="card-title">Characteristics of Recount Text</h3>
-        <div className="custom-alert">
-          <h5 className="card-title">Key Features:</h5>
-          <ul className="custom-list">
-            <li className="list-item">Contains a plot</li>
-            <li className="list-item">Focus on characters</li>
-            <li className="list-item">Entertains the reader </li>
-          </ul>
-        </div>
+        <h3 className="card-title">Characteristics of Simple Present Tense</h3>
         <div className="custom-alert">
           <h5 className="card-title">Language Features:</h5>
           <ul className="custom-list">
-            <li className="list-item">Use of Descriptive phrases</li>
-            <li className="list-item">Specific Nouns</li>
+            <li className="list-item">Use of Past Tense</li>
             <li className="list-item">Use of Action verbs</li>
-            <li className="list-item">Use of Direct and Indirect speech</li>
+            <li className="list-item">Time connectives</li>
+            <li className="list-item">Use of adjectives</li>
+            <li className="list-item">Personal pronouns</li>
           </ul>
         </div>
+      
       </>
     ),
     examples: (
       <>
-        <h3 className="card-title">Examples of Recount Text</h3>
-
+        <h3 className="card-title">Examples of Simple Presnt Tense</h3>
+        <div className="custom-alert">
+          <h5 className="card-title">Common Types:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Academic essays and research papers</li>
+            <li className="list-item">Editorial articles and opinion pieces</li>
+            <li className="list-item">Scientific journals and reports</li>
+            <li className="list-item">Policy documents and proposals</li>
+          </ul>
+        </div>
         <div className="example-box">
-          <h5>Tittle : A day at the beach</h5>
-          <p><strong>Orientation : </strong>Last Saturday, my family and I went to the beach for a picnic. The weather was sunny and perfect for a day out.</p>
-          <br/>
-          <p><strong>Events:</strong>"We arrived at the beach around 10 a.m. and quickly set up our picnic area. My siblings and I played in the water while my parents relaxed under the shade of a big umbrella. 
-          We built sandcastles, collected seashells, and took plenty of photos to remember the day."
-          "In the afternoon, we had a delicious lunch of sandwiches, fruits, and cold drinks. Afterward, we played volleyball with some other families on the beach. Everyone had a great time laughing and competing.".</p>
-          <br/>
-          <p><strong>Reorientation (conclusion):</strong> "Finally, as the sun began to set, we packed up and headed home. It was a memorable day, and I hope we can go back to the beach soon."</p>
+          <h5>Sample Structure:</h5>
+          <p><strong>Tittle:</strong> My Trip to Bali</p>
+          <p><strong>Orientation: </strong>Last summer, I went on a vacation to Bali with my family. We stayed there for a week and had an amazing time. We visited many beautiful beaches and explored the cultural sites</p>
+          <p><strong>Events:</strong>On the firts day,we arrived at Ngurah Rai International Airport and took a taxi to our hotel. The weather was hot and sunny, perfect for a beach holiday. In the afternoon,we went to Kuta Beach. We swam in the sea,built sandcastles,and enjoyed the sunset. 
+          On the second day,we visited the Sacred Monkey Forest in Ubud. The monkeys were very playful,and we took lots of pictures. Later, we tried traditional Balinese food, whichwas delicious.
+          
+          </p>
+          <ul>
+            <li>Improves vocabulary and language skills</li>
+            <li>Enhances critical thinking abilities</li>
+            <li>Builds knowledge and understanding</li>
+          </ul>
+          <p><strong>Conclusion:</strong> Reading should be encouraged and prioritized in education.</p>
         </div>
       </>
     ),
   };
 
   return (
-    <div className="narrative-container">
+    <div className="exposition-container">
       {/* Header Section */}
-      <div className="narrative-header fade-in">
-        <h1 className="narrative-title">Recount Text</h1>
-        <p className="narrative-subtitle">Retell past events, experiences, or occurrences</p>
+      <div className="expo-header fade-in">
+        <h1 className="expo-title">Recount Text</h1>
+        <p className="expo-subtitle">Understanding the structure and usage of the Simple Present Tense </p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -225,7 +222,7 @@ function Recount_Text() {
         </div>
       ) : (
         <>
-          <div className="recount-tabs">
+          <div className="expo-tabs">
             {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
               <button 
                 key={tab}
@@ -238,7 +235,7 @@ function Recount_Text() {
           </div>
 
           <div className="content-card fade-in">
-            {recountContent[activeTab]}
+            {expositionContent[activeTab]}
           </div>
 
           <div className="nav-buttons">

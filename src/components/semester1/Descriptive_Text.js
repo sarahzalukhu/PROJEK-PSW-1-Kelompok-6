@@ -117,6 +117,7 @@ function Descriptive_Text() {
             <li className="list-item">Focus on Specific Subject</li>
             <li className="list-item">Detail Description</li>
             <li className="list-item">Clear and Organized structure</li>
+            <li className="list-item"></li>
           </ul>
         </div>
         <div className="custom-alert">
@@ -144,25 +145,25 @@ function Descriptive_Text() {
   };
 
   return (
-    <div className="narrative-container">
-      {/* Header Section */}
-      <div className="narrative-header fade-in">
-        <h1 className="narrative-title">Descriptive Text</h1>
-        <p className="narrative-subtitle">Understanding and Writing Compelling Descriptive</p>
-        <button 
-          className="nav-button"
-          onClick={() => {
-            setShowQuiz(!showQuiz);
-            if (!showQuiz) {
-              setCurrentQuestion(0);
-              setScore(0);
-              setShowResult(false);
-            }
-          }}
-        >
-          {showQuiz ? 'Back to Material' : 'Test Your Knowledge'}
-        </button>
-      </div>
+    <div className="exposition-container">
+    {/* Header Section */}
+    <div className="expo-header fade-in">
+      <h1 className="expo-title">Descriptive Text</h1>
+      <p className="expo-subtitle">Understanding and Creating Effective Descriptive Text</p>
+      <button 
+        className="nav-button"
+        onClick={() => {
+          setShowQuiz(!showQuiz);
+          if (!showQuiz) {
+            setCurrentQuestion(0);
+            setScore(0);
+            setShowResult(false);
+          }
+        }}
+      >
+        {showQuiz ? 'Back to Material' : 'Test Your Knowledge'}
+      </button>
+    </div>
 
       {showQuiz ? (
         <div className="quiz-container fade-in">
