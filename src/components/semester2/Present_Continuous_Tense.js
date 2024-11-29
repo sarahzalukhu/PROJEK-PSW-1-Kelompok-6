@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Exposition.css';
+import './Semester2.css';
 
 function Present_Continuous_Tense() {
   const [activeTab, setActiveTab] = useState('definition');
@@ -10,52 +10,52 @@ function Present_Continuous_Tense() {
 
   const questions = [
     {
-      question: "What is the primary use of the Present Continuous tense?",
+      question: "What is the formula for Present Continuous Tense?",
       options: [
-        "To describe actions happening in the past",
-        "To describe actions happening at the moment of speaking",
-        "To talk about future events only",
-        "To describe completed actions"
+        "Subject + Verb (base form)",
+        "Subject + am/is/are + Verb + -ing",
+        "Subject + will + Verb",
+        "Subject + has/have + Verb"
       ],
-      correct: 1,
+      correct: 1
     },
     {
-      question: "Which sentence is an example of the Present Continuous tense?",
+      question: "When do we typically use Present Continuous Tense?",
       options: [
-        "She walks to school every day.",
-        "She is walking to school right now.",
-        "She walked to school yesterday.",
-        "She will walk to school tomorrow."
+        "For permanent situations",
+        "For completed actions",
+        "For actions happening now or planned future actions",
+        "For general truths"
       ],
-      correct: 1,
+      correct: 2
     },
     {
-      question: "What is the typical structure of a Present Continuous sentence?",
+      question: "Which is correct in Present Continuous Tense?",
       options: [
-        "Subject + has/have + verb",
-        "Subject + is/are/am + verb-ing",
-        "Subject + will + verb",
-        "Subject + verb-ed"
+        "I am play football",
+        "I am playing football",
+        "I play football",
+        "I am plays football"
       ],
-      correct: 1,
+      correct: 1
     },
     {
-      question: "Which time expression is commonly used with the Present Continuous tense?",
+      question: "What auxiliary verb is used with 'I'?",
       options: [
-        "Yesterday",
-        "At the moment",
-        "Every day",
-        "Last week"
+        "is",
+        "are",
+        "am",
+        "will"
       ],
-      correct: 1,
-    },
+      correct: 2
+    }
   ];
 
   function handleAnswer(index) {
     if (index === questions[currentQuestion].correct) {
       setScore(score + 1);
     }
-
+    
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -63,73 +63,100 @@ function Present_Continuous_Tense() {
     }
   }
 
-  const presentContinuousContent = {
+  const presentContinuousTenseContent = {
     definition: (
       <>
         <h3 className="card-title">Definition of Present Continuous Tense</h3>
         <p className="card-text">
-          The Present Continuous tense is a verb tense used to indicate that an action is occurring at the moment of speaking, is temporary, or is happening around the present time. It can also be used to describe planned future activities or changes in progress. The tense is formed by combining the present tense of the verb *to be* (is, am, are) with the present participle (*-ing* form) of the main verb.
+          Present Continuous Tense describes actions that are happening right now or planned for the near future. It is formed using the auxiliary verb 'to be' (am/is/are) and the main verb + -ing.
         </p>
+        <div className="custom-alert">
+          <h5 className="card-title">Key Uses:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Describing current actions</li>
+            <li className="list-item">Talking about temporary situations</li>
+            <li className="list-item">Discussing planned future actions</li>
+            <li className="list-item">Expressing changing or developing situations</li>
+          </ul>
+        </div>
       </>
     ),
     structure: (
       <>
         <h3 className="card-title">Structure of Present Continuous Tense</h3>
         <div className="custom-alert">
-          <h5 className="card-title">1. Positive Sentences</h5>
-          <p>Structure: Subject + is/am/are + Verb-ing</p>
-          <ul>
-            <li>Example: *She is studying for her exams.*</li>
+          <h5 className="card-title">Basic Formula</h5>
+          <ul className="custom-list">
+            <li className="list-item">Subject + am/is/are + Verb + -ing</li>
+            <li className="list-item">Use 'am' with I, 'is' with he/she/it, 'are' with you/we/they</li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">2. Negative Sentences</h5>
-          <p>Structure: Subject + is/am/are + not + Verb-ing</p>
-          <ul>
-            <li>Example: *They are not watching TV right now.*</li>
-          </ul>
-        </div>
-        <div className="custom-alert">
-          <h5 className="card-title">3. Questions</h5>
-          <p>Structure: Is/Am/Are + Subject + Verb-ing?</p>
-          <ul>
-            <li>Example: *Are you reading this article?*</li>
+          <h5 className="card-title">Verb Spelling Rules</h5>
+          <ul className="custom-list">
+            <li className="list-item">Most verbs: add -ing (play → playing)</li>
+            <li className="list-item">Verbs ending in 'e': remove 'e' and add -ing (write → writing)</li>
+            <li className="list-item">Verbs with short vowel + consonant: double last consonant (sit → sitting)</li>
           </ul>
         </div>
       </>
     ),
-    usage: (
+    characteristics: (
       <>
-        <h3 className="card-title">Uses of Present Continuous Tense</h3>
-        <ul>
-          <li><strong>Actions happening right now:</strong> To describe something that is currently taking place. Example: *She is cooking dinner.*</li>
-          <li><strong>Temporary situations:</strong> For activities or conditions that are not permanent. Example: *I am staying at my friend's house.*</li>
-          <li><strong>Future plans:</strong> To discuss arranged events in the near future. Example: *We are meeting them tomorrow.*</li>
-          <li><strong>Repeated actions (with annoyance):</strong> To emphasize irritation or habits. Example: *He is always losing his keys.*</li>
-        </ul>
+        <h3 className="card-title">Characteristics of Present Continuous Tense</h3>
+        <div className="custom-alert">
+          <h5 className="card-title">Key Characteristics:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Shows ongoing or temporary actions</li>
+            <li className="list-item">Indicates actions happening right now</li>
+            <li className="list-item">Expresses future planned activities</li>
+            <li className="list-item">Cannot be used with stative verbs</li>
+          </ul>
+        </div>
+        <div className="custom-alert">
+          <h5 className="card-title">Signal Words:</h5>
+          <ul className="custom-list">
+            <li className="list-item">now</li>
+            <li className="list-item">at the moment</li>
+            <li className="list-item">currently</li>
+            <li className="list-item">this week/month</li>
+          </ul>
+        </div>
       </>
     ),
     examples: (
       <>
         <h3 className="card-title">Examples of Present Continuous Tense</h3>
-        <ul>
-          <li>*I am writing an email.*</li>
-          <li>*They are playing soccer in the park.*</li>
-          <li>*She is not coming to the party tonight.*</li>
-          <li>*Are you listening to music?*</li>
-          <li>*We are preparing for our exams this week.*</li>
-        </ul>
+        <div className="example-box">
+          <h5>Positive Sentences:</h5>
+          <ul className="custom-list">
+            <li className="list-item">I am studying English. (current action)</li>
+            <li className="list-item">She is cooking dinner. (happening now)</li>
+            <li className="list-item">They are planning a trip. (future plan)</li>
+          </ul>
+
+          <h5>Negative Sentences:</h5>
+          <ul className="custom-list">
+            <li className="list-item">I am not watching TV. (current denial)</li>
+            <li className="list-item">He is not working today. (temporary situation)</li>
+          </ul>
+
+          <h5>Question Sentences:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Are you reading a book? (present inquiry)</li>
+            <li className="list-item">Is she coming to the party? (future plan)</li>
+          </ul>
+        </div>
       </>
     ),
   };
 
   return (
-    <div className="present-continuous-container">
-      {/* Header Section */}
-      <div className="header fade-in">
-        <h1 className="title">Present Continuous Tense</h1>
-        <p className="subtitle">Master the Tense for Actions Happening Right Now</p>
-        <button
+    <div className="narrative-container">
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Present Continuous Tense</h1>
+        <p className="narrative-subtitle">Understanding Ongoing and Future Actions</p>
+        <button 
           className="nav-button"
           onClick={() => {
             setShowQuiz(!showQuiz);
@@ -150,9 +177,9 @@ function Present_Continuous_Tense() {
             <>
               <h3 className="card-title">Quiz on Present Continuous Tense</h3>
               <div className="quiz-progress">
-                <div
+                <div 
                   className="progress-bar"
-                  style={{ width: `${(currentQuestion + 1) * 100 / questions.length}%` }}
+                  style={{width: `${(currentQuestion + 1) * 100 / questions.length}%`}}
                 />
               </div>
               <h4 className="quiz-question">{questions[currentQuestion].question}</h4>
@@ -172,7 +199,7 @@ function Present_Continuous_Tense() {
             <div className="result-container">
               <h3>Quiz Complete!</h3>
               <p>Your score: {score} out of {questions.length}</p>
-              <button
+              <button 
                 className="nav-button"
                 onClick={() => {
                   setShowQuiz(false);
@@ -188,9 +215,9 @@ function Present_Continuous_Tense() {
         </div>
       ) : (
         <>
-          <div className="tabs">
-            {['definition', 'structure', 'usage', 'examples'].map((tab) => (
-              <button
+          <div className="narrative-tabs">
+            {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
+              <button 
                 key={tab}
                 className={`tab-button ${activeTab === tab ? 'active' : ''}`}
                 onClick={() => setActiveTab(tab)}
@@ -200,7 +227,38 @@ function Present_Continuous_Tense() {
             ))}
           </div>
 
-          <div className="content-card fade-in">{presentContinuousContent[activeTab]}</div>
+          <div className="content-card fade-in">
+            {presentContinuousTenseContent[activeTab]}
+          </div>
+
+          <div className="nav-buttons">
+            <button 
+              className="nav-button"
+              onClick={() => {
+                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
+                const currentIndex = tabs.indexOf(activeTab);
+                if (currentIndex > 0) {
+                  setActiveTab(tabs[currentIndex - 1]);
+                }
+              }}
+              disabled={activeTab === 'definition'}
+            >
+              Previous
+            </button>
+            <button 
+              className="nav-button"
+              onClick={() => {
+                const tabs = ['definition', 'structure', 'characteristics', 'examples'];
+                const currentIndex = tabs.indexOf(activeTab);
+                if (currentIndex < tabs.length - 1) {
+                  setActiveTab(tabs[currentIndex + 1]);
+                }
+              }}
+              disabled={activeTab === 'examples'}
+            >
+              Next
+            </button>
+          </div>
         </>
       )}
     </div>

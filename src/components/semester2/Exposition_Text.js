@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './Exposition.css';
-
+import './Semester2.css';
 
 function Exposition_Text() {
   const [activeTab, setActiveTab] = useState('definition');
@@ -11,42 +10,42 @@ function Exposition_Text() {
 
   const questions = [
     {
-      question: "What is the main purpose of an exposition text?",
+      question: "What is the primary purpose of exposition text?",
       options: [
-        "To tell a story with characters",
-        "To present an argument with supporting evidence",
-        "To describe a place or person",
-        "To provide step-by-step instructions"
+        "To tell a story",
+        "To explain or inform about a topic",
+        "To persuade the reader",
+        "To express personal emotions"
       ],
       correct: 1
     },
     {
-      question: "Which of these is NOT a characteristic of exposition text?",
+      question: "Which of these is a typical structure in exposition texts?",
       options: [
-        "Use of facts and data",
-        "Fictional narrative elements",
-        "Logical arguments",
-        "Supporting evidence"
-      ],
-      correct: 1
-    },
-    {
-      question: "What is typically found in the conclusion of an exposition text?",
-      options: [
-        "A new argument",
-        "A plot twist",
-        "Restatement of the main thesis",
-        "A personal story"
+        "Problem, solution, evaluation",
+        "Orientation, complication, resolution",
+        "General statement, explanation, clarification",
+        "Introduction, body, conclusion"
       ],
       correct: 2
     },
     {
-      question: "Which language feature is commonly used in exposition texts?",
+      question: "What is a key characteristic of exposition text?",
       options: [
-        "Metaphors and similes",
-        "Casual language and slang",
-        "Technical terms and formal language",
-        "Rhyming words"
+        "Use of fictional characters",
+        "Emotional and personal language",
+        "Objective and factual information",
+        "Chronological storytelling"
+      ],
+      correct: 2
+    },
+    {
+      question: "Which language feature is most common in exposition texts?",
+      options: [
+        "Descriptive adjectives",
+        "Action verbs",
+        "Technical and specific vocabulary",
+        "Dialogue"
       ],
       correct: 2
     }
@@ -69,15 +68,15 @@ function Exposition_Text() {
       <>
         <h3 className="card-title">Definition of Exposition Text</h3>
         <p className="card-text">
-          An exposition text is a piece of writing that presents a logical argument or explains a topic with the purpose of informing or persuading the reader. It is based on facts, evidence, and logical reasoning rather than personal feelings or imagination.
+          Exposition text is a type of writing designed to explain, describe, or inform readers about a specific topic. Its primary goal is to provide clear, factual information and enhance the reader's understanding of a subject.
         </p>
         <div className="custom-alert">
           <h5 className="card-title">Key Purposes:</h5>
           <ul className="custom-list">
-            <li className="list-item">To present and defend an argument</li>
-            <li className="list-item">To analyze and explain complex topics</li>
-            <li className="list-item">To persuade readers using evidence</li>
-            <li className="list-item">To inform about specific subjects</li>
+            <li className="list-item">To provide detailed information about a topic</li>
+            <li className="list-item">To explain complex concepts or processes</li>
+            <li className="list-item">To educate readers through objective information</li>
+            <li className="list-item">To analyze and clarify ideas systematically</li>
           </ul>
         </div>
       </>
@@ -86,26 +85,24 @@ function Exposition_Text() {
       <>
         <h3 className="card-title">Structure of Exposition Text</h3>
         <div className="custom-alert">
-          <h5 className="card-title">1. Introduction (Thesis)</h5>
+          <h5 className="card-title">1. General Statement</h5>
           <ul className="custom-list">
-            <li className="list-item">States the main idea or position</li>
-            <li className="list-item">Previews the arguments to be discussed</li>
+            <li className="list-item">Introduces the main topic or subject</li>
+            <li className="list-item">Provides an overview of what will be explained</li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">2. Body (Arguments)</h5>
+          <h5 className="card-title">2. Explanation</h5>
           <ul className="custom-list">
-            <li className="list-item">Each paragraph presents one main point</li>
-            <li className="list-item">Includes supporting evidence and examples</li>
-            <li className="list-item">Uses linking words for coherence</li>
+            <li className="list-item">Presents detailed information about the topic</li>
+            <li className="list-item">Breaks down complex ideas into understandable parts</li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">3. Conclusion</h5>
+          <h5 className="card-title">3. Clarification</h5>
           <ul className="custom-list">
-            <li className="list-item">Restates the thesis</li>
-            <li className="list-item">Summarizes main arguments</li>
-            <li className="list-item">Provides final thoughts or recommendations</li>
+            <li className="list-item">Provides further insights or examples</li>
+            <li className="list-item">Ensures complete understanding of the topic</li>
           </ul>
         </div>
       </>
@@ -114,21 +111,21 @@ function Exposition_Text() {
       <>
         <h3 className="card-title">Characteristics of Exposition Text</h3>
         <div className="custom-alert">
-          <h5 className="card-title">Language Features:</h5>
+          <h5 className="card-title">Key Features:</h5>
           <ul className="custom-list">
-            <li className="list-item">Use of formal language and technical terms</li>
-            <li className="list-item">Present tense for timeless facts</li>
-            <li className="list-item">Logical connectives (furthermore, however, therefore)</li>
-            <li className="list-item">Objective tone and factual information</li>
+            <li className="list-item">Objective and factual presentation</li>
+            <li className="list-item">Logical and systematic organization</li>
+            <li className="list-item">Clear and precise language</li>
+            <li className="list-item">Focus on informing rather than entertaining</li>
           </ul>
         </div>
         <div className="custom-alert">
-          <h5 className="card-title">Content Features:</h5>
+          <h5 className="card-title">Language Features:</h5>
           <ul className="custom-list">
-            <li className="list-item">Clear and focused arguments</li>
-            <li className="list-item">Statistical data and research evidence</li>
-            <li className="list-item">Expert opinions and citations</li>
-            <li className="list-item">Relevant examples and case studies</li>
+            <li className="list-item">Technical and specific vocabulary</li>
+            <li className="list-item">Passive voice and impersonal tone</li>
+            <li className="list-item">Cause and effect explanations</li>
+            <li className="list-item">Comparative and analytical language</li>
           </ul>
         </div>
       </>
@@ -139,34 +136,29 @@ function Exposition_Text() {
         <div className="custom-alert">
           <h5 className="card-title">Common Types:</h5>
           <ul className="custom-list">
-            <li className="list-item">Academic essays and research papers</li>
-            <li className="list-item">Editorial articles and opinion pieces</li>
-            <li className="list-item">Scientific journals and reports</li>
-            <li className="list-item">Policy documents and proposals</li>
+            <li className="list-item">Scientific articles and reports</li>
+            <li className="list-item">Encyclopedic entries</li>
+            <li className="list-item">Textbook explanations</li>
+            <li className="list-item">Process descriptions</li>
           </ul>
         </div>
         <div className="example-box">
-          <h5>Sample Structure:</h5>
-          <p><strong>Topic:</strong> The Importance of Reading</p>
-          <p><strong>Thesis:</strong> Regular reading is crucial for cognitive development and academic success.</p>
-          <p><strong>Arguments:</strong></p>
-          <ul>
-            <li>Improves vocabulary and language skills</li>
-            <li>Enhances critical thinking abilities</li>
-            <li>Builds knowledge and understanding</li>
-          </ul>
-          <p><strong>Conclusion:</strong> Reading should be encouraged and prioritized in education.</p>
+          <h5>Sample Exposition Text:</h5>
+          <p><strong>Title:</strong> Photosynthesis: A Vital Process</p>
+          <p><strong>General Statement:</strong> Photosynthesis is a complex biochemical process crucial for life on Earth.</p>
+          <p><strong>Explanation:</strong> Plants convert sunlight, water, and carbon dioxide into glucose and oxygen through a series of chemical reactions in their chloroplasts.</p>
+          <p><strong>Clarification:</strong> This process not only provides energy for plants but also produces oxygen as a byproduct, essential for most life forms.</p>
         </div>
       </>
     ),
   };
 
   return (
-    <div className="exposition-container">
+    <div className="narrative-container">
       {/* Header Section */}
-      <div className="expo-header fade-in">
-        <h1 className="expo-title">Exposition Text</h1>
-        <p className="expo-subtitle">Understanding and Creating Effective Exposition Texts</p>
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Exposition Text</h1>
+        <p className="narrative-subtitle">Understanding and Analyzing Informative Writing</p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -226,7 +218,7 @@ function Exposition_Text() {
         </div>
       ) : (
         <>
-          <div className="expo-tabs">
+          <div className="narrative-tabs">
             {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
               <button 
                 key={tab}
