@@ -29,25 +29,25 @@ function Simple_Present_Tense() {
           "She is writing a letter",
           "I will visit the park tomorrow"
         ],
-        correct: 1
+        correct: 2
       },
       {
-        question: "Which these is commonly used in descriptive text?",
+        question: "Choose the correct verb form 'My sister ... to the mall every saturday",
         options: [
-          "Past Tense",
-          "Future Tense",
-          "Present Tense",
-          "Present continuous tense"
+          "go",
+          "goes",
+          "gone",
+          "going"
         ],
-        correct: 1
+        correct: 2
       },
       {
-        question: "What are two main parts of the structure of descriptive text?",
+        question: "Which of these sentence does not use the simple present tense?",
         options: [
-          "Introduction and Conclusion",
-          "To introduce the characters",
-          "To present the conflict or problem",
-          "To provide a moral lesson"
+          "I go to the gym twice a week",
+          "They are visiting thei grandmother",
+          "She drinks coffe every morning",
+          "We always arrive on time"
         ],
         correct: 2
       }

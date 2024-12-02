@@ -24,30 +24,30 @@ function Informal_Letters() {
         question: "How would you respond to the question, 'How do you do?' in a formal context? ",
       
         options: [
-          "The mountain stands taall and majestic",
-          "The boy runs very fast",
-          "She is writing a letter",
-          "I will visit the park tomorrow"
+          "I'm fine, thanks",
+          "Not bad",
+          "How do you do?",
+          "What's Up?"
+        ],
+        correct: 2
+      },
+      {
+        question: "What should you say when meeting someone for the first time in a formal setting?",
+        options: [
+          "Nice to meet you",
+          "What's up?",
+          "See you later ",
+          "Hey,buddy!"
         ],
         correct: 1
       },
       {
-        question: "Which these is commonly used in descriptive text?",
+        question: "What do you usually say when meeting someone for the first time?",
         options: [
-          "Past Tense",
-          "Future Tense",
-          "Present Tense",
-          "Present continuous tense"
-        ],
-        correct: 1
-      },
-      {
-        question: "What are two main parts of the structure of descriptive text?",
-        options: [
-          "Introduction and Conclusion",
-          "To introduce the characters",
-          "To present the conflict or problem",
-          "To provide a moral lesson"
+          "Nice to meet you",
+          "See you tomorrow",
+          "Goodbye",
+          "You're welcome"
         ],
         correct: 2
       }
@@ -88,15 +88,19 @@ function Informal_Letters() {
     ),
     structure: (
       <>
-        <h3 className="card-title">Types of Greetings</h3>
+        <h3 className="card-title">Greeting Structure</h3>
         <div className="custom-alert">
-          <h5 className="card-title">1. Formal Greetings (used in professional or polite situations)</h5>
+          <h5 className="card-title">1.Opening</h5>
           <ul className="custom-list">
-            <li className="list-item">Good Morning</li>
-            <li className="list-item">Good afternoon </li>
+          Formal Greetings (used in professional or polite situations)
+            <li className="list-item">Good morning/afternoon/evening </li>
             <li className="list-item">Hello, how do you do?</li>
             <li className="list-item">Nice to meet you</li>
-         
+
+            Informal Greetings (used with friends or in casual situations)
+            <li className="list-item">Hey!</li>
+            <li className="list-item">What's up?</li>
+            <li className="list-item">How's it going?</li>
           </ul>
         </div>
         <div className="custom-alert">
@@ -109,16 +113,12 @@ function Informal_Letters() {
           <li className="list-item">How are you doing?</li>
           </ul>
         </div>
-        <h3 className="card-title">Types of Introduction</h3>
+        <h3 className="card-title">Introduction Structure</h3>
         <div className="custom-alert">
-          <h5 className="card-title">1. Formal Introduction (used in professional or polite situations)</h5>
-          <ul className="custom-list">
-            <li className="list-item">Hello, my name is Angie</li>
-            <li className="list-item">Good morning, I'm angie. Nice to meet you</li>
-            <li className="list-item">Hello, how do you do?</li>
-            <li className="list-item">Nice to meet you</li>
-         
-          </ul>
+          <h5 className="card-title">1. Greeting</h5>
+          <h5 className="card-title">2. Name</h5>
+          <h5 className="card-title">3. Origin/Location</h5>
+          <h5 className="card-title">4. Details</h5>
         </div>
      
       </>
@@ -141,7 +141,7 @@ function Informal_Letters() {
     ),
     examples: (
       <>
-        <h3 className="card-title">Examples of Simple Presnt Tense</h3>
+        <h3 className="card-title">Examples of Greeting And Introduction</h3>
         
         <div className="example-box">
           <h5>1.Formal Greetings and Introduction</h5>
@@ -170,7 +170,7 @@ function Informal_Letters() {
       {/* Header Section */}
       <div className="expo-header fade-in">
         <h1 className="expo-title">Greeting and Introduction</h1>
-        <p className="expo-subtitle">Understanding the structure and usage of the Simple Present Tense </p>
+        <p className="expo-subtitle">Understanding the structure and usage of the Greetings and Introduction </p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -190,7 +190,7 @@ function Informal_Letters() {
         <div className="quiz-container fade-in">
           {!showResult ? (
             <>
-              <h3 className="card-title">Quiz on Simple Present Tense</h3>
+              <h3 className="card-title">Quiz on Greetings And Introduction</h3>
               <div className="quiz-progress">
                 <div 
                   className="progress-bar"

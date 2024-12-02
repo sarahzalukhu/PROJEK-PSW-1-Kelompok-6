@@ -146,7 +146,7 @@ function Informal_Letters() {
     ),
     examples: (
       <>
-        <h3 className="card-title">Examples of Exposition Text</h3>
+        <h3 className="card-title">Examples of Informal Text</h3>
         <div className="custom-alert">
           <h5 className="card-title">Common Types:</h5>
           <ul className="custom-list">

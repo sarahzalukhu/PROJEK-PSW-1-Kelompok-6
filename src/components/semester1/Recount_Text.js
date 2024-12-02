@@ -11,43 +11,45 @@ function Recount_Text() {
 
   const questions = [
     {
-      question: "Which sentence is in the Simple Present Tense?",
+      question: "What is the main purpose of a recount text?"
+      ,
       options: [
-        "She is reading a book",
-        "She reads books every weekend ",
-        "She read a book yesterday",
-        "She will read a book"
+        "To explain how something works",
+        "To tell about an event or experience in the past ",
+        "To describe a place or person in detail",
+        "To give instructions on how to do something"
       ],
       correct: 2
     },
     {
-        question: "What is the correct form of the sentence? ",
+        question: "Which of the following is not a feature of a recount text?" ,
       
         options: [
-          "The mountain stands taall and majestic",
-          "The boy runs very fast",
-          "She is writing a letter",
-          "I will visit the park tomorrow"
+          "written in the past tense",
+          "uses time connectors",
+          "describes a process or set of instructions",
+          "tells a personal experience or event"
         ],
-        correct: 1
+        correct: 3
       },
       {
-        question: "Which these is commonly used in descriptive text?",
+        question: "In which part of a recount text would you typically find the reorientation?",
         options: [
-          "Past Tense",
-          "Future Tense",
-          "Present Tense",
-          "Present continuous tense"
+          "In the middle of the text",
+          "At the beggining of the text",
+          "At the end of the text ",
+          "It is not included in a recount text"
         ],
-        correct: 1
+        correct: 3
       },
       {
-        question: "What are two main parts of the structure of descriptive text?",
+        question: "Which is the correct sequence for writing a recount text?",
         options: [
-          "Introduction and Conclusion",
-          "To introduce the characters",
-          "To present the conflict or problem",
-          "To provide a moral lesson"
+          "Reorientation-> Orientation -> Events",
+          "Orientation -> Events-> Reorientation ",
+          "Events-> Orientation-> Reorientation ",
+          "Events-> Reorientation-> Orientation ",
+     
         ],
         correct: 2
       }
