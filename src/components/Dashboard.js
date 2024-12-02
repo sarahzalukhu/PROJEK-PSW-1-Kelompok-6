@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Dashboard.css'; 
 import { Link, useNavigate } from 'react-router-dom';
 import logo from './1.png';
-import guru1 from './Tristan.jpg';
-import guru2 from './Tristan.jpg';
-import guru3 from './Tristan.jpg';
-import guru4 from './Tristan.jpg';
 
 function Dashboard() {
     const [isDropdownOneOpen, setIsDropdownOneOpen] = useState(false);
@@ -85,19 +81,10 @@ function Dashboard() {
                         <li className="nav-item">
                             <Link to="/quiz 2">Quiz 2</Link>
                         </li>
-                        <li className="nav-item">
-                            <button onClick={handleLogout} className="logout-button">Logout</button>
-                        </li>
                     </ul>
                 </nav>
-                <div className="active-teachers">
-                    <p>Active Teachers</p>
-                    <div className="teacher-icons">
-                        <img src={guru1} alt="Andrey"/>
-                        <img src={guru2} alt="Markus"/>
-                        <img src={guru3} alt="Sarah"/>
-                        <img src={guru4} alt="Tristan"/>
-                    </div>
+                <div className="logout">
+                    <button onClick={handleLogout} className="logout-button">Logout</button>
                 </div>
             </aside>
 
