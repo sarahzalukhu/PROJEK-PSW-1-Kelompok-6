@@ -10,6 +10,8 @@ function Dashboard() {
     const [isDropdownFourOpen, setIsDropdownFourOpen] = useState(false);
     const [isDropdownFiveOpen, setIsDropdownFiveOpen] = useState(false);
     const [username, setUsername] = useState(false);
+    const [isNavVisible, setIsNavVisible] = useState(false);
+    const [isLogoutVisible, setIsLogoutVisible] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -35,6 +37,11 @@ function Dashboard() {
         setIsDropdownFiveOpen(prevState => !prevState);
     };
 
+    const toggleNavVisibility = () => {
+        setIsNavVisible(prevState => !prevState);
+        setIsLogoutVisible(prevState => !prevState);
+    };
+
     const handleLogout = () => {
         localStorage.removeItem('username');
         navigate('/login');
@@ -43,49 +50,55 @@ function Dashboard() {
     return (
         <div className="dashboard">
             <aside className="sidebar">
-                <div className="logo">
+                <div className="logo" onClick={toggleNavVisibility}>
                     <img src={logo} alt="Elang"/>
                 </div>
                 <nav>
                     <ul>
-                        <li className="nav-item">
-                            <Link to="/dashboard">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <button className="dropdown-side" onClick={toggleDropdownFour}>Semester 1</button>
-                            {isDropdownFourOpen && (
-                                <div className="dropdown-list">
-                                    <a href="/greetings&Introduction" className="dropdown-itemm">Greetings And Introduction</a>
-                                    <a href="/recount text" className="dropdown-itemm">Recount Text</a>
-                                    <a href="/descriptive text" className="dropdown-itemm">Descriptive Text</a>
-                                    <a href="/simple present tense" className="dropdown-itemm">Simple Present Tense</a>
-                                    <a href="/informal letters" className="dropdown-itemm">Informal Letters</a>
-                                </div>
-                            )}
-                        </li>
-                        <li className="nav-item">
-                            <button className="dropdown-side" onClick={toggleDropdownFive}>Semester 2</button>
-                            {isDropdownFiveOpen && (
-                                <div className="dropdown-list">
-                                    <a href="/narative text" className="dropdown-itemm">Narative Text</a>
-                                    <a href="/procedural text" className="dropdown-itemm">Procedural Text</a>
-                                    <a href="/exposition text" className="dropdown-itemm">Exposition Text</a>
-                                    <a href="/present continuous tense" className="dropdown-itemm">Present Continuous Tense</a>
-                                    <a href="/report text" className="dropdown-itemm">Report Text</a>
-                                </div>
-                            )}
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/quiz 1">Quiz 1</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/quiz 2">Quiz 2</Link>
-                        </li>
+                        {isNavVisible && (
+                            <>
+                                <li className="nav-item">
+                                    <Link to="/dashboard">Home</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <button className="dropdown-side" onClick={toggleDropdownFour}>Semester 1</button>
+                                    {isDropdownFourOpen && (
+                                        <div className="dropdown-list">
+                                            <a href="/greetings&Introduction" className="dropdown-itemm">Greetings And Introduction</a>
+                                            <a href="/recount text" className="dropdown-itemm">Recount Text</a>
+                                            <a href="/descriptive text" className="dropdown-itemm">Descriptive Text</a>
+                                            <a href="/simple present tense" className="dropdown-itemm">Simple Present Tense</a>
+                                            <a href="/informal letters" className="dropdown-itemm">Informal Letters</a>
+                                        </div>
+                                    )}
+                                </li>
+                                <li className="nav-item">
+                                    <button className="dropdown-side" onClick={toggleDropdownFive}>Semester 2</button>
+                                    {isDropdownFiveOpen && (
+                                        <div className="dropdown-list">
+                                            <a href="/narative text" className="dropdown-itemm">Narative Text</a>
+                                            <a href="/procedural text" className="dropdown-itemm">Procedural Text</a>
+                                            <a href="/exposition text" className="dropdown-itemm">Exposition Text</a>
+                                            <a href="/present continuous tense" className="dropdown-itemm">Present Continuous Tense</a>
+                                            <a href="/report text" className="dropdown-itemm">Report Text</a>
+                                        </div>
+                                    )}
+                                </ li>
+                                <li className="nav-item">
+                                    <Link to="/quiz 1">Quiz 1</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/quiz 2">Quiz 2</Link>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 </nav>
-                <div className="logout">
-                    <button onClick={handleLogout} className="logout-button">Logout</button>
-                </div>
+                {isLogoutVisible && (
+                    <div className="logout">
+                        <button onClick={handleLogout} className="logout-button">Logout</button>
+                    </div>
+                )}
             </aside>
 
             <main className="main-content">
@@ -95,7 +108,7 @@ function Dashboard() {
                 </header>
 
                 <section className="overview">
-                    <div className="card schedule">
+                    <div className="card sem1">
                         <h3>Material Semester 1</h3>
                         <button className="dropdown-toggle" onClick={toggleDropdownOne}>
                             Semester 1
@@ -110,7 +123,7 @@ function Dashboard() {
                             </div>
                         )}
                     </div>
-                    <div className="card assignments">
+                    <div className="card sem2">
                         <h3>Material Semester 2</h3>
                         <button className="dropdown-toggle" onClick={toggleDropdownTwo}>
                             Semester 2
@@ -125,7 +138,7 @@ function Dashboard() {
                             </div>
                         )}
                     </div>
-                    <div className="card notifications">
+                    <div className="card quiz">
                     <h3>Quiz</h3>
                         <button className="dropdown-toggle" onClick={toggleDropdownThree}>
                             Test Your Knowledge
@@ -141,12 +154,11 @@ function Dashboard() {
 
                 <section className="analytics">
                     <div className="chart">
-                        <h3>Continue at Your Last Session</h3>
-                        <canvas id="attendanceChart"></canvas>
-                    </div>
-                    <div className="chart">
-                        <h3>Grades</h3>
-                        < canvas id="gradesChart"></canvas>
+                        <h3>Why English is it so Important to Learn</h3>
+                        <iframe width="560" height="256" src="https://www.youtube.com/embed/QnXPJO36bRY?si=7nqjG8rsVQ5GJ5J0"title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
                     </div>
                     <div className="chart">
                         <h3>Achievements</h3>
