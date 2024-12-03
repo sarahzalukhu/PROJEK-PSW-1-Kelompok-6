@@ -156,7 +156,7 @@ function Narrative_Text() {
 
   return (
     <div className="narrative-container">
-      {/* Header Section */}
+
       <div className="narrative-header fade-in">
         <h1 className="narrative-title">Narrative Text</h1>
         <p className="narrative-subtitle">Understanding and Writing Compelling Narratives</p>
