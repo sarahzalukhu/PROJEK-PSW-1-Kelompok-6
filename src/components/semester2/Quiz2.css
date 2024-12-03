@@ -264,3 +264,51 @@ body {
       transform: scale(1);
     }
 }
+
+@media (max-width: 768px) {
+    .app {
+        padding: 20px;
+    }
+
+    .quiz-container {
+        min-width: 100%;
+        min-height: auto;
+    }
+
+    .question-numbers .number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .navigation button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 15px;
+    }
+
+    .question-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .option {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .navigation button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}

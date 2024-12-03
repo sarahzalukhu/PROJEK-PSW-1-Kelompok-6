@@ -3,55 +3,229 @@ import "./Quiz2.css";
 
 const quizQuestions = [
   {
-    question: "My friends ... basketball every weekend.",
-    options: ["Play", "Plays", "Playing", "Played", "Player"],
+    question: "What is the purpose of a narrative text?",
+    options: [
+      "To entertain or amuse the readers",
+      "To explain how something works",
+      "To provide arguments and opinions",
+      "To describe things in general",
+    ],
     correctAnswer: 0,
   },
   {
-    question: "The sun ... in the east.",
-    options: ["Rises", "Rise", "Rising", "Risen"],
+    question: "Which of the following is NOT a part of narrative text structure?",
+    options: ["Orientation", "Complication", "Resolution", "Procedure"],
+    correctAnswer: 3,
+  },
+  {
+    question: "What is commonly found in the orientation of a narrative text?",
+    options: [
+      "Steps to do something",
+      "Introduction of characters and setting",
+      "Conflict resolution",
+      "Writer's argument",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What does the complication in a narrative text describe?",
+    options: [
+      "The introduction of the main characters",
+      "The problem faced by the characters",
+      "The moral lesson of the story",
+      "The steps to solve a problem",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "Which of the following is an example of narrative text?",
+    options: ["A folk tale", "A manual", "An opinion article", "A news report"],
     correctAnswer: 0,
   },
   {
-    question: "What time ... you usually wake up?",
-    options: ["Do", "Does", "Doing", "Done"],
+    question: "What is the main purpose of a procedural text?",
+    options: [
+      "To entertain the readers",
+      "To describe a general phenomenon",
+      "To explain how to do or make something",
+      "To argue for or against an issue",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "Which part is NOT included in a procedural text?",
+    options: ["Materials", "Steps", "Resolution", "Goal"],
+    correctAnswer: 2,
+  },
+  {
+    question: "What language feature is commonly used in procedural texts?",
+    options: [
+      "Past tense",
+      "Imperative sentences",
+      "Passive voice",
+      "Descriptive adjectives",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What does the 'steps' section of a procedural text describe?",
+    options: [
+      "The tools required",
+      "The goals to achieve",
+      "The sequence of actions to be followed",
+      "The writer's opinion",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "Which of the following is an example of procedural text?",
+    options: [
+      "A recipe",
+      "A short story",
+      "An essay",
+      "A speech",
+    ],
     correctAnswer: 0,
   },
   {
-    question: "The train ... at 10:00.",
-    options: ["Leave", "Leaves", "Leaving", "Left"],
-    correctAnswer: 1,
-  },
-  {
-    question: "The cat ... on the table.",
-    options: ["sit", "sits", "sitting", "sat"],
-    correctAnswer: 1,
-  },
-  {
-    question: "Because I always ... to school early.",
-    options: ["Goes", "Go", "Going", "Gone"],
-    correctAnswer: 1,
-  },
-  {
-    question: "They ... me so well.",
-    options: ["Knew", "Known", "Know", "Knows"],
+    question: "What is the purpose of an exposition text?",
+    options: [
+      "To describe objects in detail",
+      "To explain how to do something",
+      "To persuade or argue for an idea",
+      "To narrate a sequence of events",
+    ],
     correctAnswer: 2,
   },
   {
-    question: "She ... a bread every morning.",
-    options: ["Eating", "Ate", "Eats", "Eat"],
-    correctAnswer: 2,
+    question: "What structure is commonly found in an exposition text?",
+    options: ["Introduction, Body, Conclusion", "Goal, Steps, Materials", "Orientation, Complication, Resolution", "Phenomenon, Description"],
+    correctAnswer: 0,
   },
   {
-    question: "They are my lecturers. They ... us in a University every day.",
-    options: ["Teaches", "Teach", "Is teaching", "Taught"],
+    question: "Which of the following is NOT a characteristic of an exposition text?",
+    options: ["Factual evidence", "Use of arguments", "General statements", "Dialogues"],
+    correctAnswer: 3,
+  },
+  {
+    question: "What type of language is commonly used in exposition text?",
+    options: [
+      "Descriptive language",
+      "Persuasive language",
+      "Colloquial language",
+      "Imaginative language",
+    ],
     correctAnswer: 1,
   },
   {
-    question:
-      "Every morning the watchman turns off all the lights and ... around the building every half an hour.",
-    options: ["walking", "walked", "walks", "walk"],
+    question: "Which of the following is an example of an exposition text?",
+    options: [
+      "An editorial in a newspaper",
+      "A user manual",
+      "A legend",
+      "A poem",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which sentence is in present continuous tense?",
+    options: [
+      "I play soccer every weekend.",
+      "She is reading a book now.",
+      "They went to the park yesterday.",
+      "He has finished his homework.",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the correct form of present continuous tense?",
+    options: [
+      "Subject + has/have + verb",
+      "Subject + verb + ing",
+      "Subject + is/are/am + verb + ing",
+      "Subject + will + verb",
+    ],
     correctAnswer: 2,
+  },
+  {
+    question: "Which of the following is an example of present continuous tense?",
+    options: [
+      "They are cooking dinner at the moment.",
+      "She cooked dinner last night.",
+      "He cooks dinner every day.",
+      "We have cooked dinner.",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What question is correctly using present continuous tense?",
+    options: [
+      "Are you studying for the test now?",
+      "Do you study for the test now?",
+      "Have you studied for the test?",
+      "Will you study for the test?",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "When is the present continuous tense used?",
+    options: [
+      "For actions happening now",
+      "For habits or routines",
+      "For past actions",
+      "For future intentions",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the purpose of a report text?",
+    options: [
+      "To describe things as they are",
+      "To narrate events in sequence",
+      "To provide arguments and opinions",
+      "To give step-by-step instructions",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What structure is commonly used in report texts?",
+    options: [
+      "Introduction and description",
+      "Goal and steps",
+      "Orientation, complication, resolution",
+      "Issue, argument, conclusion",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which language feature is common in report texts?",
+    options: [
+      "Imaginative descriptions",
+      "Present tense",
+      "Metaphorical language",
+      "Persuasive arguments",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is usually described in a report text?",
+    options: [
+      "A general classification and detailed information",
+      "The steps to achieve a goal",
+      "The conflict in a story",
+      "The writer's point of view",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which of the following is an example of a report text?",
+    options: [
+      "An article about the habits of penguins",
+      "A guide to building a bookshelf",
+      "A fairy tale",
+      "An argumentative essay",
+    ],
+    correctAnswer: 0,
   },
 ];
 
@@ -115,6 +289,8 @@ export default function App() {
             ))}
           </ul>
           <button onClick={() => window.location.reload()}>Ulangi</button>
+          <button onClick={() => window.location.href = "/Dashboard"}>Kembali ke Menu</button>
+
         </div>
       ) : (
         <div className="quiz-container">
