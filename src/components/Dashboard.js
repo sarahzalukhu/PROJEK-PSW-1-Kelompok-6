@@ -154,7 +154,7 @@ function Dashboard() {
 
                 <section className="analytics">
                     <div className="chart">
-                        <h3>Why English is it so Important to Learn</h3>
+                        <h3>Why is it so Important to Learn English?</h3>
                         <iframe width="560" height="256" src="https://www.youtube.com/embed/QnXPJO36bRY?si=7nqjG8rsVQ5GJ5J0"title="YouTube video player"
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>

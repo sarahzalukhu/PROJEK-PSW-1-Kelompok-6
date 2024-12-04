@@ -299,7 +299,9 @@ export default function Quiz1() {
                 </strong>
                 <p>
                   Jawaban Benar:{" "}
-                  <span className="correct-answer">{question.options[question.correct]}</span>
+                  <span className="correct-answer">
+                    {question.options[question.correct]}
+                    </span>
                 </p>
                 <p>
                   Jawaban Anda:{" "}

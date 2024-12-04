@@ -10,12 +10,12 @@ const quizQuestions = [
       "To provide arguments and opinions",
       "To describe things in general",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "Which of the following is NOT a part of narrative text structure?",
     options: ["Orientation", "Complication", "Resolution", "Procedure"],
-    correctAnswer: 3,
+    correct: 3,
   },
   {
     question: "What is commonly found in the orientation of a narrative text?",
@@ -25,7 +25,7 @@ const quizQuestions = [
       "Conflict resolution",
       "Writer's argument",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "What does the complication in a narrative text describe?",
@@ -35,12 +35,17 @@ const quizQuestions = [
       "The moral lesson of the story",
       "The steps to solve a problem",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "Which of the following is an example of narrative text?",
-    options: ["A folk tale", "A manual", "An opinion article", "A news report"],
-    correctAnswer: 0,
+    options: [
+      "A folk tale",
+      "A manual",
+      "An opinion article",
+      "A news report",
+      ],
+      correct: 0,
   },
   {
     question: "What is the main purpose of a procedural text?",
@@ -50,12 +55,17 @@ const quizQuestions = [
       "To explain how to do or make something",
       "To argue for or against an issue",
     ],
-    correctAnswer: 2,
+    correct: 2,
   },
   {
     question: "Which part is NOT included in a procedural text?",
-    options: ["Materials", "Steps", "Resolution", "Goal"],
-    correctAnswer: 2,
+    options: [
+      "Materials",
+      "Steps",
+      "Resolution",
+      "Goal",
+    ],
+    correct: 2,
   },
   {
     question: "What language feature is commonly used in procedural texts?",
@@ -65,7 +75,7 @@ const quizQuestions = [
       "Passive voice",
       "Descriptive adjectives",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "What does the 'steps' section of a procedural text describe?",
@@ -75,7 +85,7 @@ const quizQuestions = [
       "The sequence of actions to be followed",
       "The writer's opinion",
     ],
-    correctAnswer: 2,
+    correct: 2,
   },
   {
     question: "Which of the following is an example of procedural text?",
@@ -85,7 +95,7 @@ const quizQuestions = [
       "An essay",
       "A speech",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "What is the purpose of an exposition text?",
@@ -95,17 +105,27 @@ const quizQuestions = [
       "To persuade or argue for an idea",
       "To narrate a sequence of events",
     ],
-    correctAnswer: 2,
+    correct: 2,
   },
   {
     question: "What structure is commonly found in an exposition text?",
-    options: ["Introduction, Body, Conclusion", "Goal, Steps, Materials", "Orientation, Complication, Resolution", "Phenomenon, Description"],
-    correctAnswer: 0,
+    options: [
+    "Introduction, Body, Conclusion",
+    "Goal, Steps, Materials",
+    "Orientation, Complication, Resolution",
+    "Phenomenon, Description",
+  ],
+  correct: 0,
   },
   {
     question: "Which of the following is NOT a characteristic of an exposition text?",
-    options: ["Factual evidence", "Use of arguments", "General statements", "Dialogues"],
-    correctAnswer: 3,
+    options: [
+    "Factual evidence",
+    "Use of arguments", 
+    "General statements",
+    "Dialogues",
+    ],
+    correct: 3,
   },
   {
     question: "What type of language is commonly used in exposition text?",
@@ -115,7 +135,7 @@ const quizQuestions = [
       "Colloquial language",
       "Imaginative language",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "Which of the following is an example of an exposition text?",
@@ -125,7 +145,7 @@ const quizQuestions = [
       "A legend",
       "A poem",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "Which sentence is in present continuous tense?",
@@ -135,7 +155,7 @@ const quizQuestions = [
       "They went to the park yesterday.",
       "He has finished his homework.",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "What is the correct form of present continuous tense?",
@@ -145,7 +165,7 @@ const quizQuestions = [
       "Subject + is/are/am + verb + ing",
       "Subject + will + verb",
     ],
-    correctAnswer: 2,
+    correct: 2,
   },
   {
     question: "Which of the following is an example of present continuous tense?",
@@ -155,7 +175,7 @@ const quizQuestions = [
       "He cooks dinner every day.",
       "We have cooked dinner.",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "What question is correctly using present continuous tense?",
@@ -165,7 +185,7 @@ const quizQuestions = [
       "Have you studied for the test?",
       "Will you study for the test?",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "When is the present continuous tense used?",
@@ -175,7 +195,7 @@ const quizQuestions = [
       "For past actions",
       "For future intentions",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "What is the purpose of a report text?",
@@ -185,7 +205,7 @@ const quizQuestions = [
       "To provide arguments and opinions",
       "To give step-by-step instructions",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "What structure is commonly used in report texts?",
@@ -195,7 +215,7 @@ const quizQuestions = [
       "Orientation, complication, resolution",
       "Issue, argument, conclusion",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "Which language feature is common in report texts?",
@@ -205,7 +225,7 @@ const quizQuestions = [
       "Metaphorical language",
       "Persuasive arguments",
     ],
-    correctAnswer: 1,
+    correct: 1,
   },
   {
     question: "What is usually described in a report text?",
@@ -215,7 +235,7 @@ const quizQuestions = [
       "The conflict in a story",
       "The writer's point of view",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
   {
     question: "Which of the following is an example of a report text?",
@@ -225,22 +245,25 @@ const quizQuestions = [
       "A fairy tale",
       "An argumentative essay",
     ],
-    correctAnswer: 0,
+    correct: 0,
   },
 ];
 
-export default function App() {
+export default function Quiz2() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
 
-  const handleAnswer = (index) => {
-    const isCorrect = index === quizQuestions[currentQuestion].correctAnswer;
-    if (isCorrect) setScore(score + 1);
+  const handleAnswer = (selectedIndex) => {
+    const isCorrect = selectedIndex === quizQuestions[currentQuestion].correct;
+
+    if (isCorrect) {
+      setScore((prevScore) => prevScore + 1);
+    }
 
     const newAnswers = [...selectedAnswers];
-    newAnswers[currentQuestion] = index;
+    newAnswers[currentQuestion] = selectedIndex;
     setSelectedAnswers(newAnswers);
   };
 
@@ -259,23 +282,27 @@ export default function App() {
       {showScore ? (
         <div className="score-section">
           <h2>Kuis Selesai!</h2>
-          <p>Skor Anda: {score} / {quizQuestions.length}</p>
+          <p>
+            Skor Anda: {score} / {quizQuestions.length}
+          </p>
           <h3>Kunci Jawaban:</h3>
           <ul className="answers-list">
             {quizQuestions.map((question, index) => (
               <li key={index} className="answer-item">
-                <strong>{index + 1}. {question.question}</strong>
+                <strong>
+                  {index + 1}. {question.question}
+                </strong>
                 <p>
                   Jawaban Benar:{" "}
                   <span className="correct-answer">
-                    {question.options[question.correctAnswer]}
-                  </span>
+                    {question.options[question.correct]}
+                    </span>
                 </p>
                 <p>
                   Jawaban Anda:{" "}
                   <span
                     className={
-                      selectedAnswers[index] === question.correctAnswer
+                      selectedAnswers[index] === question.correct
                         ? "correct"
                         : "incorrect"
                     }
@@ -290,7 +317,6 @@ export default function App() {
           </ul>
           <button onClick={() => window.location.reload()}>Ulangi</button>
           <button onClick={() => window.location.href = "/Dashboard"}>Kembali ke Menu</button>
-
         </div>
       ) : (
         <div className="quiz-container">
@@ -298,9 +324,7 @@ export default function App() {
             {quizQuestions.map((_, index) => (
               <div
                 key={index}
-                className={`number ${
-                  currentQuestion === index ? "active" : ""
-                }`}
+                className={`number ${currentQuestion === index ? "active" : ""}`}
                 onClick={() => setCurrentQuestion(index)}
               >
                 {index + 1}
@@ -315,10 +339,11 @@ export default function App() {
                 <div
                   key={index}
                   className={`option ${
-                    selectedAnswers[currentQuestion] === index
-                      ? index === quizQuestions[currentQuestion].correctAnswer
-                        ? "correct"
-                        : "incorrect"
+                    selectedAnswers[currentQuestion] !== undefined &&
+                    index === quizQuestions[currentQuestion].correct
+                      ? "correct"
+                      : selectedAnswers[currentQuestion] === index
+                      ? "incorrect"
                       : ""
                   }`}
                   onClick={() =>
@@ -343,9 +368,7 @@ export default function App() {
                   : nextQuestion
               }
             >
-              {currentQuestion === quizQuestions.length - 1
-                ? "Finish"
-                : "Next"}
+              {currentQuestion === quizQuestions.length - 1 ? "Finish" : "Next"}
             </button>
           </div>
         </div>

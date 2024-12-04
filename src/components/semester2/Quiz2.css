@@ -32,8 +32,7 @@ body {
     color: #333;
     margin-bottom: 20px;
 }
-  
-  
+
 .options {
     display: flex;
     flex-direction: column;
@@ -54,8 +53,8 @@ body {
 }
   
 .option:hover {
-    background: linear-gradient(135deg, #fbbf24, #8eaa06);
-    color: #ffffff;
+    background: linear-gradient(135deg, #e1e1e1, #d5e5f2);
+    color: #333;
 }
   
 .option:before {
@@ -78,14 +77,15 @@ body {
     background: linear-gradient(135deg, #c8e6c9, #81c784);
     border: 2px solid #388e3c;
     color: #ffffff;
+    padding: 15px;
 }
   
 .option.incorrect {
     background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
     border: 2px solid #d32f2f;
     color: #ffffff;
+    padding: 15px;
 }
-  
   
 .feedback {
     margin-top: 20px;
@@ -104,7 +104,7 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(135deg, #fbbf24, #fde68a);
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
@@ -113,7 +113,7 @@ body {
 }
   
 .navigation button:hover {
-    background: linear-gradient(135deg, #fbbf24, #fbbf24);
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
     transform: translateY(-2px);
 }
   
@@ -121,7 +121,6 @@ body {
     background: #cccccc;
     cursor: not-allowed;
 }
-  
   
 .question-numbers {
     display: flex;
@@ -157,12 +156,11 @@ body {
 }
   
 .number.active {
-    background: linear-gradient(135deg, #15f309, #f4ec0a);
+    background: #1565c0;
     border: 2px solid #ffffff;
     color: #ffffff;
     transform: scale(1.2);
 }
-  
   
 .score-section {
     text-align: center;
@@ -187,14 +185,14 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(135deg, #fbbf24, #fde68a);
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
     color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
 }
   
 .score-section button:hover {
-    background: linear-gradient(135deg, #fbbf24, #fbbf24);
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
     transform: translateY(-2px);
 }
 
@@ -227,21 +225,14 @@ body {
     display: block;
     margin-bottom: 8px;
 }
-  
-.correct-answer {
-    color: #2e7d32;
-    font-weight: bold;
-    padding: 2px 5px;
-    background-color: #e8f5e9;
-    border-radius: 4px;
-}
-  
+
 .correct {
     color: #2e7d32;
     font-weight: bold;
     padding: 2px 5px;
     background-color: #e8f5e9;
-    border-radius: 4px;
+    border-radius: 10px;
+    display: inline-block;
 }
   
 .incorrect {
@@ -249,10 +240,9 @@ body {
     font-weight: bold;
     padding: 2px 5px;
     background-color: #ffebee;
-    border-radius: 4px;
+    border-radius: 10px;
     display: inline-block;
 }
-  
   
 @keyframes fadeIn {
     from {
