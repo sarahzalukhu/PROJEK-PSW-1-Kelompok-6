@@ -49,7 +49,7 @@ function Informal_Letters() {
           "Goodbye",
           "You're welcome"
         ],
-        correct: 2
+        correct: 1
       }
   ];
 
@@ -73,14 +73,14 @@ function Informal_Letters() {
         <div className="custom-alert">
           <h5 className="card-title">1.Greetings</h5>
           <ul className="custom-list">
-            <li className="list-item">Greeting is a way to say "hello" or acknowledge someone. It can be used to start a conversation oe show respect </li>
+            <li className="list-item">Greeting is an expression or words way to acknowledge or welcomenyari yg  someone. It is typically done at beginning to start a conversation to show respect,attention, or friendliness towards the other person. Greetings can vary depending on the context, such as when meeting friends,teachers,family,or new acquntances </li>
 
           </ul>
         </div>
         <div className="custom-alert">
           <h5 className="card-title">2.Introduction</h5>
           <ul className="custom-list">
-            <li className="list-item">Introduction is a way to let someone know you are when meeting for the first time</li>
+            <li className="list-item">An introduction is a way to present oneself or someone else. It helps establish a connection and create a comfortable atmosphere for communication. An introduction usually includes information like name,origin,occupation,or hobbies, dependeng on the context.</li>
 
           </ul>
         </div>
@@ -92,33 +92,28 @@ function Informal_Letters() {
         <div className="custom-alert">
           <h5 className="card-title">1.Opening</h5>
           <ul className="custom-list">
-          Formal Greetings (used in professional or polite situations)
+         <h4> Formal Greetings (used in professional or polite situations)</h4>
             <li className="list-item">Good morning/afternoon/evening </li>
             <li className="list-item">Hello, how do you do?</li>
             <li className="list-item">Nice to meet you</li>
 
-            Informal Greetings (used with friends or in casual situations)
+           <h4>Informal Greetings (used with friends or in casual situations)</h4> 
             <li className="list-item">Hey!</li>
             <li className="list-item">What's up?</li>
             <li className="list-item">How's it going?</li>
           </ul>
         </div>
-        <div className="custom-alert">
-          <h5 className="card-title">2.Informal Greetings (used with friends or in casual situations) </h5>
-          <ul className="custom-list">
-          <li className="list-item">Hi</li>
-          <li className="list-item">Hey</li>
-          <li className="list-item">What's up?</li>
-          <li className="list-item">How's it going?</li>
-          <li className="list-item">How are you doing?</li>
-          </ul>
-        </div>
+  
         <h3 className="card-title">Introduction Structure</h3>
         <div className="custom-alert">
-          <h5 className="card-title">1. Greeting</h5>
-          <h5 className="card-title">2. Name</h5>
-          <h5 className="card-title">3. Origin/Location</h5>
-          <h5 className="card-title">4. Details</h5>
+        <li className="list-item">1.Opening : Greeting</li>
+
+        <li className="list-item">2.Name  example : my name is (your name)</li>
+          <li className="list-item">3. Origin/Residence : im am from(place)</li>
+          <li className="list-item">3. Occupation/Status: I work as a (job) / I am a student </li>
+          <li className="list-item">3.Closing : It's a pleasure to meet you </li>
+
+
         </div>
      
       </>
@@ -127,6 +122,7 @@ function Informal_Letters() {
       <>
         <h3 className="card-title">Characteristics of Greetings and Introduction</h3>
         <div className="custom-alert">
+          
 
           <ul className="custom-list">
             <li className="list-item">Polite and Respectful Tone</li>
@@ -135,7 +131,16 @@ function Informal_Letters() {
             <li className="list-item">Focus on clarity</li>
             <li className="list-item">Time relevance</li>
           </ul>
-        </div>
+          </div>
+          <div className="custom-alert">
+          <h5 className="card-title">Key Features:</h5>
+          <ul className="custom-list">
+            <li className="list-item">Primary Auxiliary verbs : Have , Do, Be</li>
+            <li className="list-item">Personal Pronoun: Subject pronoun, Object pronoun</li>
+
+          </ul>
+        </div> 
+       
       
       </>
     ),

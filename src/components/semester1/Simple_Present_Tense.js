@@ -128,27 +128,23 @@ function Simple_Present_Tense() {
     ),
     examples: (
       <>
-        <h3 className="card-title">Examples of Simple Presnt Tense</h3>
-        <div className="custom-alert">
-          <h5 className="card-title">Common Types:</h5>
-          <ul className="custom-list">
-            <li className="list-item">Academic essays and research papers</li>
-            <li className="list-item">Editorial articles and opinion pieces</li>
-            <li className="list-item">Scientific journals and reports</li>
-            <li className="list-item">Policy documents and proposals</li>
-          </ul>
-        </div>
+        <h3 className="card-title">Examples of Simple Present Tense</h3>
         <div className="example-box">
-          <h5>Sample Structure:</h5>
-          <p><strong>Topic:</strong> The Importance of Reading</p>
-          <p><strong>Thesis:</strong> Regular reading is crucial for cognitive development and academic success.</p>
-          <p><strong>Arguments:</strong></p>
-          <ul>
-            <li>Improves vocabulary and language skills</li>
-            <li>Enhances critical thinking abilities</li>
-            <li>Builds knowledge and understanding</li>
-          </ul>
-          <p><strong>Conclusion:</strong> Reading should be encouraged and prioritized in education.</p>
+          <h5>Positive Sentence</h5>
+          <strong><li> I wake up at 6 a.m every day</li>  </strong> 
+          <strong><li>They play football in the park every weekend </li>  </strong> 
+          <strong><li>She studies english every evening </li>  </strong> 
+
+          <h5>Negative Sentences</h5>
+      <strong><li> I do not like spicy food</li>  </strong> 
+      <strong><li>He does not watch TV at night</li>  </strong> 
+      <strong><li>The dog does not bark at strangers</li>  </strong> 
+
+      <h5>Interrogative Sentences</h5>
+      <strong><li> Do you walk to school every day?</li>  </strong> 
+      <strong><li>Does she visit her grandmother regularly</li>  </strong> 
+      <strong><li>Do we need to submit the homework today?</li>  </strong> 
+
         </div>
       </>
     ),
