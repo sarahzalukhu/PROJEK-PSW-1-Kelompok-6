@@ -151,11 +151,11 @@ function Simple_Present_Tense() {
   };
 
   return (
-    <div className="exposition-container">
+    <div className="narrative-container">
       {/* Header Section */}
-      <div className="expo-header fade-in">
-        <h1 className="expo-title">Simple Present Tense</h1>
-        <p className="expo-subtitle">Understanding the structure and usage of the Simple Present Tense </p>
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Simple Present Tense</h1>
+        <p className="narrative-subtitle">Understanding the structure and usage of the Simple Present Tense </p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -215,7 +215,7 @@ function Simple_Present_Tense() {
         </div>
       ) : (
         <>
-          <div className="expo-tabs">
+          <div className="narrative-tabs">
             {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
               <button 
                 key={tab}

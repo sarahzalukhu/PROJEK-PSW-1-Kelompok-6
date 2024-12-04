@@ -125,7 +125,7 @@ function Exposition_Text() {
             <li className="list-item">Technical and specific vocabulary</li>
             <li className="list-item">Passive voice and impersonal tone</li>
             <li className="list-item">Cause and effect explanations</li>
-            <li className="list-item">Comparative and analytical language</li>
+            <li className="list-item">Comparative and analytica language</li>
           </ul>
         </div>
       </>

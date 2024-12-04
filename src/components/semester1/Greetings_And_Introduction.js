@@ -171,11 +171,11 @@ function Informal_Letters() {
   };
 
   return (
-    <div className="exposition-container">
+    <div className="narrative-container">
       {/* Header Section */}
-      <div className="expo-header fade-in">
-        <h1 className="expo-title">Greeting and Introduction</h1>
-        <p className="expo-subtitle">Understanding the structure and usage of the Greetings and Introduction </p>
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Greeting and Introduction</h1>
+        <p className="narrative-subtitle">Understanding the structure and usage of the Greetings and Introduction </p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -235,7 +235,7 @@ function Informal_Letters() {
         </div>
       ) : (
         <>
-          <div className="expo-tabs">
+          <div className="narrative-tabs">
             {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
               <button 
                 key={tab}

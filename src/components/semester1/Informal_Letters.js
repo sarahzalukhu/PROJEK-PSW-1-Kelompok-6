@@ -165,11 +165,11 @@ function Informal_Letters() {
   };
 
   return (
-    <div className="exposition-container">
+    <div className="narrative-container">
       {/* Header Section */}
-      <div className="expo-header fade-in">
-        <h1 className="expo-title">Informal Letters</h1>
-        <p className="expo-subtitle">Understanding and Creating Effective Informal Letters</p>
+      <div className="narrative-header fade-in">
+        <h1 className="narrative-title">Informal Letters</h1>
+        <p className="narrative-subtitle">Understanding and Creating Effective Informal Letters</p>
         <button 
           className="nav-button"
           onClick={() => {
@@ -229,7 +229,7 @@ function Informal_Letters() {
         </div>
       ) : (
         <>
-          <div className="expo-tabs">
+          <div className="narrative-tabs">
             {['definition', 'structure', 'characteristics', 'examples'].map((tab) => (
               <button 
                 key={tab}

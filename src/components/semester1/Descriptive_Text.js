@@ -145,11 +145,11 @@ function Descriptive_Text() {
   };
 
   return (
-    <div className="exposition-container">
+    <div className="narrative-container">
     {/* Header Section */}
-    <div className="expo-header fade-in">
-      <h1 className="expo-title">Descriptive Text</h1>
-      <p className="expo-subtitle">Understanding and Creating Effective Descriptive Text</p>
+    <div className="narrative-header fade-in">
+      <h1 className="narrative-title">Descriptive Text</h1>
+      <p className="narrative-subtitle">Understanding and Creating Effective Descriptive Text</p>
       <button 
         className="nav-button"
         onClick={() => {
