@@ -130,16 +130,8 @@ function Recount_Text() {
     ),
     examples: (
       <>
-        <h3 className="card-title">Examples of Simple Presnt Tense</h3>
-        <div className="custom-alert">
-          <h5 className="card-title">Common Types:</h5>
-          <ul className="custom-list">
-            <li className="list-item">Academic essays and research papers</li>
-            <li className="list-item">Editorial articles and opinion pieces</li>
-            <li className="list-item">Scientific journals and reports</li>
-            <li className="list-item">Policy documents and proposals</li>
-          </ul>
-        </div>
+        <h3 className="card-title">Examples of Recount</h3>
+  
         <div className="example-box">
           <h5>Sample Structure:</h5>
           <p><strong>Tittle:</strong> My Trip to Bali</p>
