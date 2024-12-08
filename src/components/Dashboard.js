@@ -10,8 +10,6 @@ function Dashboard() {
     const [isDropdownFourOpen, setIsDropdownFourOpen] = useState(false);
     const [isDropdownFiveOpen, setIsDropdownFiveOpen] = useState(false);
     const [username, setUsername] = useState(false);
-    const [isNavVisible, setIsNavVisible] = useState(false);
-    const [isLogoutVisible, setIsLogoutVisible] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -37,11 +35,6 @@ function Dashboard() {
         setIsDropdownFiveOpen(prevState => !prevState);
     };
 
-    const toggleNavVisibility = () => {
-        setIsNavVisible(prevState => !prevState);
-        setIsLogoutVisible(prevState => !prevState);
-    };
-
     const handleLogout = () => {
         localStorage.removeItem('username');
         navigate('/login');
@@ -50,55 +43,49 @@ function Dashboard() {
     return (
         <div className="dashboard">
             <aside className="sidebar">
-                <div className="logo" onClick={toggleNavVisibility}>
+                <div className="logo">
                     <img src={logo} alt="Elang"/>
                 </div>
                 <nav>
                     <ul>
-                        {isNavVisible && (
-                            <>
-                                <li className="nav-item">
-                                    <Link to="/dashboard">Home</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <button className="dropdown-side" onClick={toggleDropdownFour}>Semester 1</button>
-                                    {isDropdownFourOpen && (
-                                        <div className="dropdown-list">
-                                            <a href="/greetings&Introduction" className="dropdown-itemm">Greetings And Introduction</a>
-                                            <a href="/recount text" className="dropdown-itemm">Recount Text</a>
-                                            <a href="/descriptive text" className="dropdown-itemm">Descriptive Text</a>
-                                            <a href="/simple present tense" className="dropdown-itemm">Simple Present Tense</a>
-                                            <a href="/informal letters" className="dropdown-itemm">Informal Letters</a>
-                                        </div>
-                                    )}
-                                </li>
-                                <li className="nav-item">
-                                    <button className="dropdown-side" onClick={toggleDropdownFive}>Semester 2</button>
-                                    {isDropdownFiveOpen && (
-                                        <div className="dropdown-list">
-                                            <a href="/narative text" className="dropdown-itemm">Narative Text</a>
-                                            <a href="/procedural text" className="dropdown-itemm">Procedural Text</a>
-                                            <a href="/exposition text" className="dropdown-itemm">Exposition Text</a>
-                                            <a href="/present continuous tense" className="dropdown-itemm">Present Continuous Tense</a>
-                                            <a href="/report text" className="dropdown-itemm">Report Text</a>
-                                        </div>
-                                    )}
-                                </ li>
-                                <li className="nav-item">
-                                    <Link to="/quiz 1">Quiz 1</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/quiz 2">Quiz 2</Link>
-                                </li>
-                            </>
-                        )}
+                    <li className="nav-item">
+                            <Link to="/dashboard">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <button className="dropdown-side" onClick={toggleDropdownFour}>Semester 1</button>
+                            {isDropdownFourOpen && (
+                                <div className="dropdown-list">
+                                    <a href="/greetings&Introduction" className="dropdown-itemm">Greetings And Introduction</a>
+                                    <a href="/recount text" className="dropdown-itemm">Recount Text</a>
+                                    <a href="/descriptive text" className="dropdown-itemm">Descriptive Text</a>
+                                    <a href="/simple present tense" className="dropdown-itemm">Simple Present Tense</a>
+                                    <a href="/informal letters" className="dropdown-itemm">Informal Letters</a>
+                                </div>
+                            )}
+                        </li>
+                        <li className="nav-item">
+                            <button className="dropdown-side" onClick={toggleDropdownFive}>Semester 2</button>
+                            {isDropdownFiveOpen && (
+                                <div className="dropdown-list">
+                                    <a href="/narative text" className="dropdown-itemm">Narative Text</a>
+                                    <a href="/procedural text" className="dropdown-itemm">Procedural Text</a>
+                                    <a href="/exposition text" className="dropdown-itemm">Exposition Text</a>
+                                    <a href="/present continuous tense" className="dropdown-itemm">Present Continuous Tense</a>
+                                    <a href="/report text" className="dropdown-itemm">Report Text</a>
+                                </div>
+                            )}
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/quiz 1">Quiz 1</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/quiz 2">Quiz 2</Link>
+                        </li>
                     </ul>
                 </nav>
-                {isLogoutVisible && (
-                    <div className="logout">
-                        <button onClick={handleLogout} className="logout-button">Logout</button>
-                    </div>
-                )}
+                <div className="logout">
+                    <button onClick={handleLogout} className="logout-button">Logout</button>
+                </div>
             </aside>
 
             <main className="main-content">
